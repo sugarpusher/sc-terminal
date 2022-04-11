@@ -1,0 +1,120 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+@import "custom.scss";
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 4. Include any optional Bootstrap CSS as needed
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+body {
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    background-color: #E5E5E5;
+}
+
+.content-wrap {
+    max-width: $wrap-size;
+}
+
+b {
+    font-weight: 700;
+}
+
+.p-box-lg {
+    padding: 60px;
+}
+.p-box-md {
+    padding: 40px 60px ;
+}
+.p-box-sm {
+    padding: 20px 60px;
+}
+
+.bg-gray-lt {
+    background-color: $gray-lt;
+}
+.bg-gray-md {
+    background-color: $gray-md;
+}
+.bg-gray-dk {
+    background-color: $gray-dk;
+}
+
+#logo {
+    width: 78px;
+}
+
+a.link {
+    color: $cyan;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px dashed $cyan;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 35px;
+    span {
+        font-weight: 100;
+        font-size: 22px;
+    }
+}
+
+.btn {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @extend .py-3;
+    span {
+        display: block;
+        font-weight: 100;
+        font-size: 10px;
+    }
+}
+
+.welcome main {
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.en {
+    text-align: right;
+    font-weight: 700;
+    margin-right: -14px;
+    margin-top: -15px;  
+    font-size: 11px;
+    a {
+        color: $black;
+        border-bottom-style: solid;
+    }
+}
+
+a {
+    text-decoration: none;
+    border-bottom-style: dashed;
+    border-bottom-width: 2px;
+}
+
+address a {
+    display: block;
+    border: none;
+    color: $black;
+    font-weight: 100;
+    @extend .mb-2;
+}
