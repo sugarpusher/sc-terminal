@@ -7364,6 +7364,9 @@ a.link::after {
   border-bottom: 2px dashed #979797;
 }
 
+.welcome {
+  background-color: #F4F3F4;
+}
 .welcome .en {
   text-align: right;
   font-weight: 700;
@@ -7413,18 +7416,26 @@ a.link::after {
   line-height: 0.9;
   color: #333;
 }
+@media screen and (max-width: 991.98px) {
+  .welcome main h1, .welcome main .h1 {
+    font-size: 30px;
+  }
+}
 @media screen and (max-width: 767.98px) {
   .welcome main h1, .welcome main .h1 {
     font-size: 22px;
+    line-height: 1.2;
   }
 }
 .welcome main h1 span, .welcome main .h1 span {
   font-weight: 700;
   font-size: 78px;
+  display: block;
 }
 @media screen and (max-width: 991.98px) {
   .welcome main h1 span, .welcome main .h1 span {
-    display: block;
+    display: inline;
+    font-size: 64px;
   }
 }
 @media screen and (max-width: 767.98px) {
