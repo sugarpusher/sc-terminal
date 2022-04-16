@@ -160,14 +160,6 @@ a.link {
                     font-size: 35px;
                 }
             }
-
-            @media (max-width: 575px) {
-                span:not(first-child){
-                    .swtdot {
-                        // display: block;
-                    }
-                }
-            }
         }
         .btn-warning {
             max-width: 248px;
