@@ -26,11 +26,15 @@ body {
     font-family: $font-family-sans-serif;
     font-weight: 300;
     color: $black;
+    text-align: center;
+    font-size: 12px;
+    min-height: 100vh;
+    display: flex;
 }
 
 .container {
     @media screen and (max-width: 767.98px) {
-        max-width: 248px;
+        max-width: 300px;
     }
 }
 
@@ -62,14 +66,20 @@ b {
     background-color: $gray-dk;
 }
 
+.bg-info {
+    background-color: $info !important;
+    color: $white
+}
+
 .btn {
     font-size: 21px;
-    padding: 32px;
+    padding: 20px 32px;
     max-width: 320px;
     width: 100%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    // box-shadow: -2px 2px 2px rgb(0 0 0 / 25%), inset -2px 2px 2px rgb(255 255 255 / 5%);
     border-radius: 2px;
-
+    margin-bottom: 10px;
     span {
         display: block;
         font-weight: 100;
@@ -78,8 +88,46 @@ b {
 }
 
 .btn-darker {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.15);
     border-color: transparent;
+    color: $white;
+}
+
+.btn-info {
+    background-color: #44a1d5;
+    border-color: #44a1d5;
+    color: $white;
+    display: block;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 15%),
+    inset 0px 1px 2px rgb(255 255 255 / 15%);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 35px; 
+}
+
+header {
+    p {
+        max-width: 500px;
+    }
+}
+
+.flex-space {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (min-width: 768px) {
+        text-align: left;
+        
+        // flex-direction: row;
+        // align-items: center;
+        // gap: 40px;
+    }
+}
+
+.fw-100 {
+    font-weight: 100;
 }
 
 a.link {
@@ -90,17 +138,18 @@ a.link {
     position: relative;
     &::after {
         position: absolute;
-        left: 16px;
-        bottom: 16px;
         content: "";
-        width: calc(100% - 32px);
         height: 0px;
         border-bottom: 2px dashed #979797;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
     }
 }
 
 .welcome {
     background-color: $gray-lt;
+    display: block;
     .en {
         text-align: right;
         font-weight: 700;
@@ -122,73 +171,86 @@ a.link {
 
         .d-flex {
             justify-content: space-between;
-            flex-direction: row;
-            align-items: self-end;
             align-content: center;
             margin-bottom: 46px;
-            @media (max-width: 767.98px) {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            @media (min-width: 768px) {
+                flex-direction: row;
+                align-items: self-end;
+                text-align: left;
             }
         }
         #logo {
-            width: 68px;
+            width: 78px;
             display: inline-block;
             margin-bottom: 50px;
-            @media screen and (max-width: 767.98px) {
-                width: 78px;
+            @media screen and (min-width: 768px) {
+                width: 68px;
             }
         }
 
         h1 {
             font-weight: 100;
-            font-size: 34px;
             max-width: 375px;
-            line-height: 0.9;
             color: #333;
-            @media screen and (max-width: 991.98px) {
+            font-size: 22px;
+            line-height: 1.2;
+            
+            @media screen and (min-width: 768px) {
                 font-size: 30px;
+                line-height: 0.9;
             }
-            @media screen and (max-width: 767.98px) {
-                font-size: 22px;
-                line-height: 1.2;
+            @media screen and (min-width: 992px) {
+                font-size: 34px;
             }
         
             span {
                 font-weight: 700;
-                font-size: 78px;
-                display: block;
-                @media screen and(max-width: 991.98px) {
-                    display: inline;
+                font-size: 35px;
+
+                @media screen and(min-width: 768px) {
                     font-size: 64px;
                 }
-                @media screen and(max-width: 767.98px) {
-                    font-size: 35px;
+                @media screen and(min-width: 992px) {
+                    font-size: 78px;
+                    display: block;
                 }
             }
         }
         .btn-warning {
             max-width: 248px;
-            @media screen and (max-width: 768px) {
-                margin-top: 70px;
+            margin-top: 70px;
+            padding: 32px;
+            @media screen and (min-width: 768px) {
+                margin-top: 0;
             }
         }
     }
     .links {
         @extend .py-20;
         font-size: 12px;
-        .link {
-            padding: 16px;
-            margin-left: -16px;
+        text-align: left;
+        span {
+            display: block;
+            .link {
+                padding: 8px 16px;
+                margin-left: -16px;
+                &::after {
+                    left: 16px;
+                    width: calc(100% - 32px);
+                    bottom: 8px;
+                }            
+            }
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (min-width: 768px) {
             span {
-                display: block;
+                display: inline;
                 .link {
-                    padding: 8px 16px;
-                    &:after {
-                        bottom: 8px;
+                    padding: 16px;
+                    &::after {
+                        bottom: 16px;
                     }
                 }
             }
@@ -197,6 +259,7 @@ a.link {
     address {
         @extend .py-60;
         font-size: 14px;
+        text-align: left;
         .container {
             div {
                 margin-left: -4px;
