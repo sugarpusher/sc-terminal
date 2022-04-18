@@ -7385,8 +7385,8 @@ b {
 .btn {
   font-size: 21px;
   padding: 20px 32px;
-  max-width: 320px;
-  width: 100%;
+  width: 320px;
+  max-width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   margin-bottom: 10px;
@@ -7409,6 +7409,10 @@ b {
   color: #fff;
   display: block;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15), inset 0px 1px 2px rgba(255, 255, 255, 0.15);
+}
+
+.btn-light {
+  color: #24B1FF;
 }
 
 h1, .h1 {
@@ -7454,6 +7458,7 @@ body .flex-space {
 body header p {
   max-width: 500px;
   font-weight: 300;
+  font-size: 14px;
 }
 @media screen and (min-width: 768px) {
   body header h1, body header .h1 {
@@ -7469,6 +7474,27 @@ body.bg-gray-lt {
   background-color: #F4F3F4;
 }
 body.bg-gray-lt header h1, body.bg-gray-lt header .h1 {
+  color: #A5A5A5;
+}
+body.bg-gray-lt .close a img {
+  filter: brightness(0);
+}
+body.bg-gray-lt .username {
+  color: #262626;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  body.bg-gray-lt .username {
+    font-size: 21px;
+  }
+}
+body.bg-gray-lt .wallet {
+  font-weight: 300;
+  font-size: 12px;
   color: #A5A5A5;
 }
 body.bg-gray-md {
@@ -7578,16 +7604,15 @@ body.welcome main h1 span, body.welcome main .h1 span {
 @media screen and (min-width: 768px) {
   body.welcome main h1 span, body.welcome main .h1 span {
     font-size: 64px;
+    display: block;
   }
 }
 @media screen and (min-width: 992px) {
   body.welcome main h1 span, body.welcome main .h1 span {
     font-size: 78px;
-    display: block;
   }
 }
 body.welcome main .btn-warning {
-  max-width: 248px;
   margin-top: 70px;
   padding: 32px;
 }
@@ -7754,22 +7779,95 @@ body.set-avatar .chooseAnother {
     text-align: left;
   }
 }
-body.password .flex-space {
+body.password-warning .flex-space {
   height: 500px;
 }
-body.password .content {
+body.password-warning .content {
   background-color: #fff;
   padding: 45px 30px 30px;
   position: relative;
   font-size: 16px;
   font-weight: 700;
 }
-body.password .content img {
+body.password-warning .content img {
   position: absolute;
   left: 50%;
   top: 0;
   transform: translate(-50%, -50%);
 }
-body.password .content p:last-child {
+body.password-warning .content p:last-child {
   margin-bottom: 0;
+}
+body.restore .flex-space {
+  height: 350px;
+}
+body.choose-password form input {
+  font-weight: 400;
+  border-bottom-color: #878787;
+  color: #262626;
+}
+@media screen and (min-width: 768px) {
+  body.choose-password form input {
+    text-align: left;
+  }
+}
+body.choose-password form ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #262626;
+  opacity: 1;
+  /* Firefox */
+}
+body.choose-password form :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #262626;
+}
+body.choose-password form ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #262626;
+}
+body.choose-password .error {
+  color: #FB0007;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+body.account-complete .flex-space {
+  justify-content: flex-start;
+}
+body.account-complete .flex-space header h1, body.account-complete .flex-space header .h1 {
+  color: #24B1FF;
+}
+body.account-complete .flex-space figure.avatar {
+  margin-bottom: 15px;
+}
+body.account-complete .flex-space .btn {
+  margin-top: 60px;
+}
+body.restore-confirm figure.avatar {
+  margin-bottom: 15px;
+}
+body.restore-confirm .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  body.restore-confirm .btns {
+    margin-left: -11px;
+  }
+}
+body.restore-confirm .btns .close {
+  position: unset;
+  width: auto;
+  padding: 11px;
+}
+body.restore-confirmed header h1, body.restore-confirmed header .h1 {
+  color: #24B1FF;
+}
+body.restore-confirmed figure.avatar {
+  margin-bottom: 15px;
+}
+body.restore-confirmed .btn {
+  margin-top: 90px;
 }
