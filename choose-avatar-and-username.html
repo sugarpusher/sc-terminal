@@ -14,28 +14,38 @@
 		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
         <link rel="stylesheet" href="css/style.css">        
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Let's create an account</title>        
+		<title>Swarm City - Choose a username and an avatar</title>        
     </head>
-    <body class="bg-info create-account">
+    <body class="bg-gray-lt choose-username">
         <div class="container">
             <div class="close">
-                <a href="/">
+                <a href="usr-view-create.html">
                     <img src="assets/imgs/close.svg" />
                 </a>
             </div>
-            <main class=" flex-space">
+            <main class="flex-space">
                 <header>
                     <h1>
-                        Let's create an account.
+                        Choose a username and an avatar.
                     </h1>
-                    <p>No account was found on this device. When you restore or create a new account, it is stored locally on your device.</p>
                 </header>
+                <div class="content">
+                    <figure class="avatar">
+                        <a href="usr-set-avatar-edit.html">
+                            <img src="assets/imgs/avatar.svg" alt="user avatar">
+                        </a>
+                        <a class="btn-icon btn-info btn-upload" href="usr-set-avatar-edit.html">
+                            <img src="assets/imgs/arrowUp.svg">
+                        </a>
+                    </figure>
+                    <form>
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" id="username">
+                    </form>
+                </div>
                 <div class="btns">
-                    <a class="btn btn-info" href="choose-avatar-and-username.html">
-                        create account
-                    </a>
-                    <a class="btn btn-info" href="usr-view-restore-select.html">
-                        restore account
+                    <a class="btn-icon" href="password-warning.html">
+                        <img src="assets/imgs/caretNext.svg">
                     </a>
                 </div>
             </main>

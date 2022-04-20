@@ -14,33 +14,37 @@
 		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
         <link rel="stylesheet" href="css/style.css">        
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - WARNING</title>        
+		<title>Swarm City - Account Complete</title>        
     </head>
-    <body class="bg-gray-lt py-60 password-warning">  
-        <div class="close">
-            <div class="container position-relative">
+    <body class="bg-gray-lt account-complete">
+        <div class="container">
+            <div class="close">
                 <a href="usr-creation-stop.html">
-                    <img src="assets/imgs/close.svg">
+                    <img src="assets/imgs/close.svg" />
                 </a>
             </div>
+            <main class="flex-space">
+                <header>
+                    <h1>
+                        Great!
+                    </h1>
+                    <p>
+                        You now have a Swarm City account.<br/>Let's create a backup!
+                    </p>
+                </header>
+                <div class="content">
+                    <figure class="avatar">
+                        <img src="assets/imgs/avatar.svg" alt="user avatar">
+                    </figure>
+                    <p class="username">Tester X</p>
+                </div>
+                <div class="btns">
+                    <a class="btn btn-light" href="backup-download.html">
+                        backup my account
+                    </a>
+                </div>
+            </main>
         </div>
-        <main class="container flex-space">
-            <header>
-                <h1>
-                    Choose a password.
-                </h1>
-            </header>
-            <div class="content">
-                <img src="assets/imgs/warningBlue.svg">
-                <p>There is no password recovery available in Swarm City.</p>
-                <p>Choose your password with care.</p>
-            </div>
-            <div class="btns">
-                <a class="btn-icon" href="usr-choose-password.html">
-                    <img src="assets/imgs/caretNext.svg">
-                </a>
-            </div>
-        </main>
         <!-- Bootstrap JS, uncomment if needed -->
         <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
 
