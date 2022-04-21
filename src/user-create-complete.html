@@ -14,39 +14,34 @@
 		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
         <link rel="stylesheet" href="css/style.css">        
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Choose a username and an avatar</title>        
+		<title>Swarm City - Account Complete</title>        
     </head>
-    <body class="bg-gray-lt choose-username">
+    <body class="bg-gray-lt account-complete">
         <div class="close">
-            <a href="usr-view-create.html">
+            <a href="user-create-stop.html">
                 <img src="assets/imgs/close.svg" />
             </a>
         </div>
         <div class="container">
-            <div class="spacer"></div>
+            
             <main class="flex-space">
                 <header>
                     <h1>
-                        Choose a username and an avatar.
+                        Great!
                     </h1>
+                    <p>
+                        You now have a Swarm City account.<br/>Let's create a backup!
+                    </p>
                 </header>
                 <div class="content">
                     <figure class="avatar">
-                        <a href="usr-set-avatar-edit.html">
-                            <img src="assets/imgs/avatar.svg" alt="user avatar">
-                        </a>
-                        <a class="btn-icon btn-info btn-upload" href="usr-set-avatar-edit.html">
-                            <img src="assets/imgs/arrowUp.svg">
-                        </a>
+                        <img src="assets/imgs/avatar.svg" alt="user avatar">
                     </figure>
-                    <form>
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" id="username">
-                    </form>
+                    <p class="username">Tester X</p>
                 </div>
                 <div class="btns">
-                    <a class="btn-icon" href="password-warning.html">
-                        <img src="assets/imgs/caretNext.svg">
+                    <a class="btn btn-light" href="user-backup-print-download.html">
+                        backup my account
                     </a>
                 </div>
             </main>

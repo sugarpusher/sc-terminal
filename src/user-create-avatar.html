@@ -14,41 +14,37 @@
 		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
         <link rel="stylesheet" href="css/style.css">        
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Backup Download</title>        
+		<title>Swarm City - Set Avatar</title>        
     </head>
-    <body class="bg-gray-lt download-file">  
-        <div class="close">
-            <a href="account-complete.html">
-                <img src="assets/imgs/close.svg">
-            </a>
-        </div>
-        <div class="container">            
-            <div class="spacer"></div>
+    <body class="bg-gray-lt set-avatar">
+        <div class="container">
+            
             <main class="flex-space">
                 <header>
-                    <h1>
-                        Make a backup.
-                    </h1>
-                </header>
-                <div class="warning-box">
-                    <img src="assets/imgs/warningBlue.svg">
-                    <div>
-                        <p>
-                            There are no central servers on which accounts are stored. <br/>
-                            This means you are responsible for your own account at all times.
-                        </p>
-                        <p>
-                            Your backup is encrypted with your current password.
-                        </p>
+                    <div class="canvas">
+                        <a href="/" class="avatar">
+                            <img src="assets/imgs/avatar.svg">
+                        </a>
+                        <a href="/" class="rotate">
+                            <img src="assets/imgs/iconRotate.svg">
+                        </a>
                     </div>
+                    <p>Scroll to zoom - drag to move</p>
+                </header>
+                <div class="btns">
+                    <a class="close" href="user-create-username.html">
+                        <img src="assets/imgs/cancel.svg">
+                    </a>
+                    <a class="btn-icon" href="user-create-username.html">
+                        <img src="assets/imgs/checkMarkBlue.svg">
+                    </a>
                 </div>
-                <a class="btn btn-light" href="/">
-                    download my file
-                </a>            
             </main>
-            <p class="bottomlink">
-                <a class="link" href="my-keys-keyhidden.html">show my keys</a>
-            </p>
+            <div class="bottomlink">
+                <a class="link" href="/">
+                    choose another file
+                </a>
+            </div>
         </div>
         <!-- Bootstrap JS, uncomment if needed -->
         <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->

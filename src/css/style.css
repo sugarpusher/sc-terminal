@@ -7319,6 +7319,7 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
+  padding-top: 137px;
 }
 @media screen and (min-width: 768px) {
   body {
@@ -7332,13 +7333,12 @@ body .container {
 }
 @media screen and (max-width: 767.98px) {
   body .container {
-    max-width: 300px;
+    width: 100%;
+    max-width: 450px;
   }
 }
-body .spacer {
-  height: 137px;
-}
-body .close {
+body .close,
+body .en {
   text-align: right;
   position: absolute;
   top: 32px;
@@ -7349,12 +7349,15 @@ body .close {
   z-index: 100;
 }
 @media screen and (min-width: 768px) {
-  body .close {
+  body .close,
+body .en {
     margin: 0 calc((100% - 992px) / 2);
   }
 }
 body .close img,
-body .close svg {
+body .close svg,
+body .en img,
+body .en svg {
   padding: 15px;
 }
 body h1, body .h1 {
@@ -7381,9 +7384,39 @@ body a.link {
   border-bottom: 2px dotted #24b1ff;
   display: inline-block;
 }
-body .key {
-  font-weight: 200;
+body .darktext, body.user-account .user .darktext, body.user-account .user form input, body.user-account form .user input, body form input, body .marketplace-reps .marketplace .title {
+  color: #333333;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  body .darktext, body.user-account .user .darktext, body.user-account .user form input, body.user-account form .user input, body form input, body .marketplace-reps .marketplace .title {
+    font-size: 21px;
+    text-align: left;
+    margin-left: 0;
+  }
+}
+body .errortext, body .btn-error {
+  color: #d0021b !important;
+}
+body .largetext, body .marketplace-reps .marketplace .reps .rep > div:first-child, body .key {
   font-size: 20px;
+  font-weight: 200;
+}
+body .label, body form label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #666666;
+}
+@media screen and (min-width: 768px) {
+  body .label, body form label {
+    font-size: 16px;
+  }
+}
+body .key {
   word-break: break-all;
   text-align: left;
   margin-bottom: 20px;
@@ -7488,6 +7521,31 @@ body .warning-box p:last-child {
     transform: none;
   }
 }
+body .marketplace-reps {
+  margin-top: 40px;
+  align-self: self-start;
+}
+body .marketplace-reps .marketplace .title {
+  text-align: left;
+}
+body .marketplace-reps .marketplace .reps {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+body .marketplace-reps .marketplace .reps .rep p {
+  margin-bottom: 0;
+}
+body .marketplace-reps .marketplace .reps .rep > div:first-child {
+  color: #24b1ff;
+}
+body .marketplace-reps .marketplace .reps .rep:not(:last-child) {
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: 1px dotted #bfbfbf;
+}
 body .bottomlink {
   margin-top: 84px;
 }
@@ -7495,6 +7553,7 @@ body .divider {
   width: 100%;
   height: 1px;
   margin: 60px 0;
+  min-height: 1px;
   background-color: #e6e6e6;
 }
 body main {
@@ -7571,27 +7630,11 @@ body form {
   border-bottom-color: #666666;
   color: #262626;
 }
-body form label {
-  display: block;
-  font-size: 11px;
-  font-weight: 700;
-  color: #666666;
-}
-@media screen and (min-width: 768px) {
-  body form label {
-    font-size: 16px;
-  }
-}
 body form input {
   border: none;
   background-color: transparent;
   border-bottom: 1px solid #333333;
   padding-bottom: 5px;
-  color: #333333;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 40px;
-  text-align: center;
   display: block;
   max-width: 320px;
   width: 205px;
@@ -7602,13 +7645,6 @@ body form input:focus {
 }
 body form input:focus-visible {
   outline: none;
-}
-@media screen and (min-width: 768px) {
-  body form input {
-    font-size: 21px;
-    text-align: left;
-    margin-left: 0;
-  }
 }
 body form ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -7638,7 +7674,7 @@ body.welcome .en {
   text-align: right;
   font-weight: 700;
   font-size: 11px;
-  padding-top: 30px;
+  padding: 15px;
 }
 body.welcome .en a {
   color: #262626;
@@ -7933,4 +7969,28 @@ body.keys hr {
 body.keys .btn.btn-light {
   color: #262626;
   margin-top: 40px;
+}
+body.success header h1, body.success header .h1 {
+  color: #24b1ff;
+  margin-bottom: 20px;
+}
+body.success .btns {
+  margin-top: 170px;
+}
+body.success .btns .btn {
+  color: #262626;
+}
+body.user-account .avatar {
+  margin-bottom: 45px;
+}
+body.user-account .link {
+  margin-top: 30px;
+}
+body.user-account .user .darktext, body.user-account .user .marketplace-reps .marketplace .title, body.user-account .marketplace-reps .marketplace .user .title, body.user-account .user form input, body.user-account form .user input, body.user-account .user form input, body.user-account form .user input {
+  border-bottom: 1px solid #333333;
+  padding-bottom: 5px;
+  display: block;
+  width: 205px;
+  max-width: 320px;
+  margin: auto;
 }

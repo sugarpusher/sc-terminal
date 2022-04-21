@@ -14,39 +14,42 @@
 		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
         <link rel="stylesheet" href="css/style.css">        
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Account Complete</title>        
+		<title>Swarm City - Backup Download</title>        
     </head>
-    <body class="bg-gray-lt py-60 restore-confirm">
+    <body class="bg-gray-lt download-file">  
         <div class="close">
-            <a href="usr-creation-stop.html">
+            <a href="user-create-complete.html">
                 <img src="assets/imgs/close.svg">
             </a>
         </div>
-        <div class="container">
-            <div class="spacer"></div>
-                <main class="flex-space">
+        <div class="container">            
+            
+            <main class="flex-space">
                 <header>
                     <h1>
-                        Is this the correct account?
+                        Make a backup.
                     </h1>
                 </header>
-                <div class="content">
-                    <figure class="avatar">
-                        <img src="assets/imgs/avatar.svg" alt="user avatar">
-                    </figure>
-                    <p class="username">Tester X</p>
+                <div class="warning-box">
+                    <img src="assets/imgs/warningBlue.svg">
+                    <div>
+                        <p>
+                            There are no central servers on which accounts are stored. <br/>
+                            This means you are responsible for your own account at all times.
+                        </p>
+                        <p>
+                            Your backup is encrypted with your current password.
+                        </p>
+                    </div>
                 </div>
-                <div class="btns">
-                    <a class="close" href="usr-view-restore-select.html">
-                        <img src="assets/imgs/cancel.svg">
-                    </a>
-                    <a class="btn-icon" href="usr-view-restore-confirmed.html">
-                        <img src="assets/imgs/checkMarkBlue.svg">
-                    </a>
-                </div>
+                <a class="btn btn-light" href="user-backup-download.html">
+                    download my file
+                </a>            
             </main>
+            <p class="bottomlink">
+                <a class="link" href="user-keys-public.html">show my keys</a>
+            </p>
         </div>
-        
         <!-- Bootstrap JS, uncomment if needed -->
         <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
 

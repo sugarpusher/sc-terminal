@@ -14,46 +14,43 @@
 		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
         <link rel="stylesheet" href="css/style.css">        
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Account Complete</title>        
+		<title>Swarm City - Choose a username and an avatar</title>        
     </head>
-    <body class="bg-gray-lt keys">
+    <body class="bg-gray-lt choose-username">
         <div class="close">
-            <a href="backup-download.html">
+            <a href="user-create-restore.html">
                 <img src="assets/imgs/close.svg" />
             </a>
-        </div>        
-        <div class="spacer"></div>
-        <main class="flex-space">
-            <div class="container">
-                <p>
-                    Your public key:
-                </p>
-                <p class="key key-public">
-                    0x369D787F3EcF4a0e57cDfCFB2Db92134e1982e06
-                </p>
-                <div class="links">
-                    <a class="link" href="/">copy public key</a>
-                    <a class="link" href="/">show QR code</a>
+        </div>
+        <div class="container">
+            
+            <main class="flex-space">
+                <header>
+                    <h1>
+                        Choose a username and an avatar.
+                    </h1>
+                </header>
+                <div class="content">
+                    <figure class="avatar">
+                        <a href="user-create-avatar.html">
+                            <img src="assets/imgs/avatar.svg" alt="user avatar">
+                        </a>
+                        <a class="btn-icon btn-info btn-upload" href="user-create-avatar.html">
+                            <img src="assets/imgs/arrowUp.svg">
+                        </a>
+                    </figure>
+                    <form>
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" id="username">
+                    </form>
                 </div>
-            </div>
-            <div class="divider"></div>
-            <div class="container">
-                <p>
-                    Your private key:
-                </p>
-                <p class="key key-private key-hidden">
-                    Be careful in displaying your private key. 
-                    It's the only thing needed to steal your funds.
-                </p>
-            </div>
-            <div class="container">
                 <div class="btns">
-                    <a class="btn btn-light" href="my-keys-keyshown.html">
-                        show private key
+                    <a class="btn-icon" href="user-create-password.html">
+                        <img src="assets/imgs/caretNext.svg">
                     </a>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
         <!-- Bootstrap JS, uncomment if needed -->
         <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
 

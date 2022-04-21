@@ -14,33 +14,42 @@
 		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
         <link rel="stylesheet" href="css/style.css">        
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Let's create an account</title>        
+		<title>Swarm City - Account Complete</title>        
     </head>
-    <body class="bg-info create-account">
+    <body class="bg-gray-lt keys">
         <div class="close">
-            <a href="/">
-                <img src="assets/imgs/closeWhite.svg" />
+            <a href="user-backup-print-download.html">
+                <img src="assets/imgs/close.svg" />
             </a>
         </div>
-        <div class="container">
-            <div class="spacer"></div>
-            <main class=" flex-space">
-                <header>
-                    <h1>
-                        Let's create an account.
-                    </h1>
-                    <p>No account was found on this device. When you restore or create a new account, it is stored locally on your device.</p>
-                </header>
-                <div class="btns">
-                    <a class="btn btn-info" href="choose-avatar-and-username.html">
-                        create account
-                    </a>
-                    <a class="btn btn-info" href="usr-view-restore-select.html">
-                        restore account
-                    </a>
+                        
+        <main class="flex-space">
+            <div class="container">
+                <p>
+                    Your public key:
+                </p>
+                <p class="key key-public">
+                    0x369D787F3EcF4a0e57cDfCFB2Db92134e1982e06
+                </p>
+                <div class="links">
+                    <a class="link" href="#">copy public key</a>
+                    <a class="link" href="#">show QR code</a>
                 </div>
-            </main>
-        </div>
+            </div>
+            <div class="divider"></div>
+            <div class="container">
+                <p>
+                    Your private key:
+                </p>
+                <p class="key key-private key-shown">
+                    0x369D787F3EcF4a0e57cDfCFB2Db92134e1982e06
+                </p>
+                <div class="links">
+                    <a class="link" href="#">copy private key</a>
+                    <!-- <a class="link" href="/">show QR code</a> -->
+                </div>
+            </div>
+        </main>
         <!-- Bootstrap JS, uncomment if needed -->
         <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
 
