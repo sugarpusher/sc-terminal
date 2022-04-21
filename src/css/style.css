@@ -7965,10 +7965,17 @@ body.restore-confirm .btns .close {
   width: auto;
   padding: 11px;
 }
-body.restore-confirmed header h1, body.restore-confirmed header .h1 {
+body.restore-confirmed .flex-space header h1, body.restore-confirmed .flex-space header .h1 {
   color: #24b1ff;
 }
-body.restore-confirmed figure.avatar {
+body.restore-confirmed .flex-space .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+}
+body.restore-confirmed .flex-space .content figure.avatar {
   margin-bottom: 15px;
 }
 body.restore-confirmed .btn {

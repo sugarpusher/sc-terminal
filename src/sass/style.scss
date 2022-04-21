@@ -837,13 +837,23 @@ body {
     }
 
     &.restore-confirmed {
-        header {
-            h1 {
-                color: $info;
+        .flex-space {
+            header {
+                h1 {
+                    color: $info;
+                }
             }
-        }
-        figure.avatar {
-            margin-bottom: 15px;
+            .content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 30px;
+                
+                figure.avatar {
+                    margin-bottom: 15px;
+                }
+            }
         }
         .btn {
             margin-top: 90px;
