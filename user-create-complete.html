@@ -14,40 +14,37 @@
 		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
         <link rel="stylesheet" href="css/style.css">        
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Backup Download</title>        
+		<title>Swarm City - Account Complete</title>        
     </head>
-    <body class="bg-gray-lt download-file">  
+    <body class="bg-gray-lt account-complete">
+        <div class="close">
+            <a href="usr-creation-stop.html">
+                <img src="assets/imgs/close.svg" />
+            </a>
+        </div>
         <div class="container">
-            <div class="close">
-                <a href="account-complete.html">
-                    <img src="assets/imgs/close.svg">
-                </a>
-            </div>
+            <div class="spacer"></div>
             <main class="flex-space">
                 <header>
                     <h1>
-                        Make a backup.
+                        Great!
                     </h1>
+                    <p>
+                        You now have a Swarm City account.<br/>Let's create a backup!
+                    </p>
                 </header>
-                <div class="warning-box">
-                    <img src="assets/imgs/warningBlue.svg">
-                    <div>
-                        <p>
-                            There are no central servers on which accounts are stored. <br/>
-                            This means you are responsible for your own account at all times.
-                        </p>
-                        <p>
-                            Your backup is encrypted with your current password.
-                        </p>
-                    </div>
+                <div class="content">
+                    <figure class="avatar">
+                        <img src="assets/imgs/avatar.svg" alt="user avatar">
+                    </figure>
+                    <p class="username">Tester X</p>
                 </div>
-                <a class="btn btn-light" href="/">
-                    download my file
-                </a>            
+                <div class="btns">
+                    <a class="btn btn-light" href="user-backup-print-download.html">
+                        backup my account
+                    </a>
+                </div>
             </main>
-            <p class="bottomlink">
-                <a class="link" href="my-keys-keyhidden.html">show my keys</a>
-            </p>
         </div>
         <!-- Bootstrap JS, uncomment if needed -->
         <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->

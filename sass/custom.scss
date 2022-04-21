@@ -2,19 +2,17 @@
 
 
 // BS variables customization
-// $info: #4A90E2;
-$info: #24B1FF;
-$cyan: #24B1FF;
-$warning: #EFD96F;
-$danger: #F55858;
+$info: #24b1ff;
+$warning: #efd96f;
+$danger: #f55858;
 $error: #FB0007;
-$success: #6AD792;
-$gray-lt: #F4F3F4;
-$gray-md: #EBEBEB;
-$gray-dk: #A5A5A5;
-$gray-dkest: #878787;
-$gray-underline: #979797;
-$black: #262626;
+$success: #7ad69c;
+$blue: $info;
+$yellow: $warning;
+$green: $success;
+$red: $danger;
+
+
 
 $font-family-sans-serif: 'Montserrat',
 sans-serif;
@@ -26,3 +24,22 @@ $input-btn-font-size: 21px;
 
 
 // SC variables 
+
+$grey1: #f2f2f2;
+$grey1b: #e6e6e6;
+$grey2: #bfbfbf;
+$grey3: #666666;
+$grey3b: #acacac;
+$grey4: #333333;
+$green2: #23b460;
+$red2: #d0021b;
+
+$white: #fafafa;
+$black: #262626;
+
+.baseShadow {
+    box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
+}

@@ -14,31 +14,41 @@
 		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
         <link rel="stylesheet" href="css/style.css">        
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Let's create an account</title>        
+		<title>Swarm City - Backup Download</title>        
     </head>
-    <body class="bg-info create-account">
-        <div class="container">
-            <div class="close">
-                <a href="/">
-                    <img src="assets/imgs/close.svg" />
-                </a>
-            </div>
-            <main class=" flex-space">
+    <body class="bg-gray-lt download-file">  
+        <div class="close">
+            <a href="account-complete.html">
+                <img src="assets/imgs/close.svg">
+            </a>
+        </div>
+        <div class="container">            
+            <div class="spacer"></div>
+            <main class="flex-space">
                 <header>
                     <h1>
-                        Let's create an account.
+                        Make a backup.
                     </h1>
-                    <p>No account was found on this device. When you restore or create a new account, it is stored locally on your device.</p>
                 </header>
-                <div class="btns">
-                    <a class="btn btn-info" href="choose-avatar-and-username.html">
-                        create account
-                    </a>
-                    <a class="btn btn-info" href="usr-view-restore-select.html">
-                        restore account
-                    </a>
+                <div class="warning-box">
+                    <img src="assets/imgs/warningBlue.svg">
+                    <div>
+                        <p>
+                            There are no central servers on which accounts are stored. <br/>
+                            This means you are responsible for your own account at all times.
+                        </p>
+                        <p>
+                            Your backup is encrypted with your current password.
+                        </p>
+                    </div>
                 </div>
+                <a class="btn btn-light" href="/">
+                    download my file
+                </a>            
             </main>
+            <p class="bottomlink">
+                <a class="link" href="my-keys-keyhidden.html">show my keys</a>
+            </p>
         </div>
         <!-- Bootstrap JS, uncomment if needed -->
         <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->

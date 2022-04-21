@@ -14,29 +14,31 @@
 		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
         <link rel="stylesheet" href="css/style.css">        
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Choose  password</title>        
+		<title>Swarm City - Account Complete</title>        
     </head>
-    <body class="bg-gray-lt choose-password">
+    <body class="bg-gray-lt backup-download">
+        <div class="close">
+            <a href="usr-creation-stop.html">
+                <img src="assets/imgs/close.svg" />
+            </a>
+        </div>
         <div class="container">
-            <div class="close">
-                <a href="password-warning.html">
-                    <img src="assets/imgs/close.svg" />
-                </a>
-            </div>
+            <div class="spacer"></div>
             <main class="flex-space">
                 <header>
                     <h1>
-                        Choose a password.
+                        Success!
                     </h1>
+                    <p>
+                        You've downloaded your account file.
+                    </p>
+                    <p>
+                        Your account file combined with your password will always give you access to your SWT balance.
+                    </p>
                 </header>
-                <form>
-                    <input type="password" id="password" placeholder="password">
-                    <input type="password" id="passwordConfirm" placeholder="confirm password">
-                </form>
-                <p class="error">[password mismatch?]</p>
                 <div class="btns">
-                    <a class="btn-icon" href="account-complete.html">
-                        <img src="assets/imgs/caretNext.svg">
+                    <a class="btn btn-light" href="/">
+                        back to profile
                     </a>
                 </div>
             </main>
