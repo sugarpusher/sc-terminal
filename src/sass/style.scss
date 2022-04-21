@@ -69,8 +69,8 @@ body {
     .en {
         text-align: right;
         position: absolute;
-        top: 32px;
-        right: 0;
+        top: 16px;
+        right: 16px;
         // width: calc(100% + 60px);
         width: 100%;
         max-width: 992px;
@@ -282,8 +282,13 @@ body {
     }
 
     .marketplace-reps {
-        margin-top: 40px;
         align-self: self-start;
+        max-width: 320px;
+        margin: 40px auto 0;
+
+        @media screen and (min-width: 768px) {
+            margin-left: 0;
+        }
 
         .marketplace {        
             .title {
@@ -447,7 +452,14 @@ body {
             &:focus-visible {
                 outline: none;
             }
-
+            
+            @media screen and (min-width: 768px) {
+                width: 276px;
+                margin-left: 0;
+                &:not(:first-child) {
+                    margin-top: 40px;
+                }
+            }
             
         }
 
@@ -456,18 +468,21 @@ body {
             color: $black;
             opacity: 1;
             font-weight: 400;
+            font-size: 14px;
         }
         
         :-ms-input-placeholder {
             /* Internet Explorer 10-11 */
             color: $black;
             font-weight: 400;
+            font-size: 14px;
         }
         
         ::-ms-input-placeholder {
             /* Microsoft Edge */
             color: $black;
             font-weight: 400;
+            font-size: 14px;
         }
     }
 
@@ -659,10 +674,10 @@ body {
         }
     }
 
-    &.stop-creating {
+    &.stop-creating,
+    &.exit {
         color: $white;
-        .flex-space {
-            
+        .flex-space {            
             @media screen and (min-width: 768px) {
                 align-items: flex-start;
             }
@@ -673,6 +688,9 @@ body {
             justify-content: center;
             align-items: center;
             gap: 15px;            
+            .close {
+                cursor: pointer;
+            }
         }
         
     }
@@ -744,9 +762,9 @@ body {
     }
 
     &.restore {
-        .flex-space {
-            height: 350px;
-        }        
+        .btns {
+            margin-top: 130px;
+        }      
     }
 
     &.choose-password {
@@ -880,8 +898,7 @@ body {
         .link {
             margin-top: 30px;
         }
-        .user {
-            
+        .user {            
             .darktext {
                 border-bottom: 1px solid $grey4;
                 padding-bottom: 5px;
@@ -891,6 +908,20 @@ body {
                 max-width: 320px;
                 margin: auto;
             }
+        }
+    }
+
+    &.download-success {
+        header {
+            h1 {
+                margin-bottom: 40px;
+            }
+        }
+        .link {
+            margin-top: 40px;
+        }
+        .btns {
+            margin-top: 60px;
         }
     }
 }

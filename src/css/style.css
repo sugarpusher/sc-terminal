@@ -7341,8 +7341,8 @@ body .close,
 body .en {
   text-align: right;
   position: absolute;
-  top: 32px;
-  right: 0;
+  top: 16px;
+  right: 16px;
   width: 100%;
   max-width: 992px;
   margin: 0 auto;
@@ -7522,8 +7522,14 @@ body .warning-box p:last-child {
   }
 }
 body .marketplace-reps {
-  margin-top: 40px;
   align-self: self-start;
+  max-width: 320px;
+  margin: 40px auto 0;
+}
+@media screen and (min-width: 768px) {
+  body .marketplace-reps {
+    margin-left: 0;
+  }
 }
 body .marketplace-reps .marketplace .title {
   text-align: left;
@@ -7646,21 +7652,33 @@ body form input:focus {
 body form input:focus-visible {
   outline: none;
 }
+@media screen and (min-width: 768px) {
+  body form input {
+    width: 276px;
+    margin-left: 0;
+  }
+  body form input:not(:first-child) {
+    margin-top: 40px;
+  }
+}
 body form ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #262626;
   opacity: 1;
   font-weight: 400;
+  font-size: 14px;
 }
 body form :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #262626;
   font-weight: 400;
+  font-size: 14px;
 }
 body form ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #262626;
   font-weight: 400;
+  font-size: 14px;
 }
 body.welcome {
   padding-top: 0;
@@ -7824,20 +7842,23 @@ body.choose-username .btns {
   margin: auto;
   margin-top: 80px;
 }
-body.stop-creating {
+body.stop-creating, body.exit {
   color: #fafafa;
 }
 @media screen and (min-width: 768px) {
-  body.stop-creating .flex-space {
+  body.stop-creating .flex-space, body.exit .flex-space {
     align-items: flex-start;
   }
 }
-body.stop-creating .btns {
+body.stop-creating .btns, body.exit .btns {
   margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
+}
+body.stop-creating .btns .close, body.exit .btns .close {
+  cursor: pointer;
 }
 body.set-avatar {
   padding-top: 80px;
@@ -7887,8 +7908,8 @@ body.set-avatar .flex-space .btns .close {
   width: auto;
   padding: 11px;
 }
-body.restore .flex-space {
-  height: 350px;
+body.restore .btns {
+  margin-top: 130px;
 }
 body.choose-password form {
   margin-top: 80px;
@@ -7993,4 +8014,13 @@ body.user-account .user .darktext, body.user-account .user .marketplace-reps .ma
   width: 205px;
   max-width: 320px;
   margin: auto;
+}
+body.download-success header h1, body.download-success header .h1 {
+  margin-bottom: 40px;
+}
+body.download-success .link {
+  margin-top: 40px;
+}
+body.download-success .btns {
+  margin-top: 60px;
 }
