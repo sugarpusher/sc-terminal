@@ -18,11 +18,11 @@
     </head>
     <body class="bg-gray-lt keys">
         <div class="close">
-            <a href="#" onclick="history.go(-1)">
+            <a href="user-wallet.html">
                 <img src="assets/imgs/close.svg" />
             </a>
-        </div>
-                        
+        </div>        
+        
         <main class="flex-space">
             <div class="container">
                 <p>
@@ -33,20 +33,27 @@
                 </p>
                 <div class="links">
                     <a class="link" href="#">copy public key</a>
-                    <a class="link" href="user-keys-public-qr.html">show QR code</a>
+                    <a class="link" href="#">show QR code</a>
                 </div>
+                <figure class="qrcode">
+                    <img src="assets/imgs/qrCode.svg" />
+                </figure>
             </div>
             <div class="divider"></div>
             <div class="container">
                 <p>
                     Your private key:
                 </p>
-                <p class="key key-private key-shown">
-                    0x369D787F3EcF4a0e57cDfCFB2Db92134e1982e06
+                <p class="key key-private key-hidden">
+                    Be careful in displaying your private key. 
+                    It's the only thing needed to steal your funds.
                 </p>
-                <div class="links">
-                    <a class="link" href="#">copy private key</a>
-                    <!-- <a class="link" href="/">show QR code</a> -->
+            </div>
+            <div class="container">
+                <div class="btns">
+                    <a class="btn btn-light" href="user-keys-private.html">
+                        show private key
+                    </a>
                 </div>
             </div>
         </main>

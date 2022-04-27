@@ -7320,6 +7320,7 @@ body {
   align-items: stretch;
   justify-content: flex-start;
   padding-top: 137px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   body {
@@ -7329,42 +7330,51 @@ body {
 body .container {
   position: relative;
   padding: 0 40px 20px 40px;
-  max-width: 992px;
+  max-width: 450px;
+  width: 100%;
 }
-@media screen and (max-width: 767.98px) {
+@media screen and (min-width: 768px) {
   body .container {
-    width: 100%;
-    max-width: 450px;
+    max-width: 768px;
   }
 }
 body .close,
-body .en {
+body .en,
+body .icon-exit {
   text-align: right;
   position: absolute;
   top: 16px;
   right: 16px;
   width: 100%;
-  max-width: 992px;
+  max-width: 768px;
   margin: 0 auto;
   z-index: 100;
 }
 @media screen and (min-width: 768px) {
   body .close,
-body .en {
-    margin: 0 calc((100% - 992px) / 2);
+body .en,
+body .icon-exit {
+    margin: 0 calc((100% - 768px) / 2);
   }
 }
 body .close img,
 body .close svg,
 body .en img,
-body .en svg {
+body .en svg,
+body .icon-exit img,
+body .icon-exit svg {
   padding: 15px;
+}
+body .icon-exit {
+  top: 135px;
+  right: 45px;
+  width: 50px;
 }
 body h1, body .h1 {
   font-weight: 700;
   font-size: 35px;
   margin-bottom: 0;
-  line-height: 1;
+  line-height: 104%;
 }
 body b {
   font-weight: 700;
@@ -7377,12 +7387,19 @@ body .links {
   gap: 30px;
   justify-content: center;
 }
+body a:not(.link) {
+  text-decoration: none;
+}
 body a.link {
   color: #24b1ff;
   font-weight: 700;
   text-decoration: none;
   border-bottom: 2px dotted #24b1ff;
   display: inline-block;
+}
+body a.link.link-dark {
+  color: #666666;
+  border-bottom-color: #666666;
 }
 body .darktext, body.user-account .user .darktext, body.user-account .user form input, body.user-account form .user input, body form input, body .marketplace-reps .marketplace .title {
   color: #333333;
@@ -7401,7 +7418,7 @@ body .darktext, body.user-account .user .darktext, body.user-account .user form 
 body .errortext, body .btn-error {
   color: #d0021b !important;
 }
-body .largetext, body .marketplace-reps .marketplace .reps .rep > div:first-child, body .key {
+body .largetext, body .key {
   font-size: 20px;
   font-weight: 200;
 }
@@ -7426,8 +7443,18 @@ body .key.key-hidden {
   word-break: normal;
   text-align: center;
 }
+body .qrcode {
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  body .qrcode {
+    margin-left: 80px;
+  }
+}
 body.bg-info {
   background-color: #24b1ff !important;
+}
+body.bg-info, body.bg-success, body.bg-danger {
   color: #fafafa !important;
 }
 body .btn {
@@ -7471,6 +7498,22 @@ body .btn-icon {
 body .btn-icon.btn-info {
   background-color: #24b1ff;
 }
+body .wallet-balance {
+  color: #efd96f;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+}
+body .wallet-balance .usd {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+  body .wallet-balance .usd {
+    display: inline;
+  }
+}
 body figure {
   position: relative;
 }
@@ -7478,6 +7521,32 @@ body figure.avatar {
   display: flex;
   width: 90px;
   margin: 60px auto;
+}
+@media screen and (min-width: 768px) {
+  body figure.avatar {
+    margin-left: 0;
+  }
+}
+body figure.avatar.avatar-sm {
+  margin: 0;
+  width: auto;
+  align-items: center;
+}
+body figure.avatar.avatar-sm img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+body figure.avatar.avatar-sm figcaption {
+  text-align: left;
+}
+body figure.avatar.avatar-sm figcaption .username {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 100%;
+}
+body figure.avatar.avatar-sm figcaption .wallet-balance {
+  font-size: 22px;
 }
 body figure .btn-icon {
   position: absolute;
@@ -7546,6 +7615,13 @@ body .marketplace-reps .marketplace .reps .rep p {
 }
 body .marketplace-reps .marketplace .reps .rep > div:first-child {
   color: #24b1ff;
+  font-size: 20px;
+  font-weight: 200;
+}
+@media screen and (min-width: 768px) {
+  body .marketplace-reps .marketplace .reps .rep > div:first-child {
+    font-weight: 400;
+  }
 }
 body .marketplace-reps .marketplace .reps .rep:not(:last-child) {
   padding-right: 15px;
@@ -7562,6 +7638,15 @@ body .divider {
   min-height: 1px;
   background-color: #e6e6e6;
 }
+body .divider.short {
+  margin: 47px 0;
+}
+body .container ~ .divider {
+  margin-top: 40px;
+}
+body .container ~ .divider.short {
+  margin-top: 27px;
+}
 body main {
   display: flex;
 }
@@ -7576,6 +7661,21 @@ body .flex-space .btns .close {
   width: auto;
   padding: 11px;
   margin: 0 auto;
+}
+body .flex-space .btns.btn-icons {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+body .flex-space .btns.btn-icons .close {
+  margin: 0 !important;
+}
+@media screen and (min-width: 768px) {
+  body .flex-space .btns.btn-icons {
+    justify-content: flex-start;
+  }
 }
 @media screen and (min-width: 768px) {
   body .flex-space {
@@ -7629,12 +7729,78 @@ body.bg-gray-md {
 body.bg-gray-dk {
   background-color: #acacac;
 }
+body .history {
+  min-width: 320px;
+  max-width: 100%;
+  text-align: left;
+}
+body .history .history-item {
+  color: #666666;
+  font-weight: 300;
+  margin-bottom: 21px;
+}
+body .history .history-item .date {
+  font-size: 10px;
+}
+body .history .history-item .tx-amt {
+  font-size: 16px;
+  line-height: 17px;
+  margin-top: 2px;
+}
+body .history .history-item .link {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 400;
+}
+body .history .history-item.pending .tx-amt {
+  font-size: 24px;
+}
+body .history .history-item.pending .tx-amt span {
+  color: #24b1ff;
+  font-size: 36px;
+  padding-left: 15px;
+}
+body .history .history-item.pending .status {
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  body .history .history-item.pending .status {
+    font-size: 24px;
+  }
+}
+body .history .history-item.pending .link {
+  color: #24b1ff;
+  font-weight: 700;
+}
+body .history .history-item.failed .date,
+body .history .history-item.failed .tx-amt {
+  color: #d0021b;
+}
+body .history .history-item.failed .tx-amt span {
+  font-weight: 700;
+}
+body .history .history-item.pending, body .history .history-item.failed {
+  color: #333333;
+  margin-bottom: 40px;
+}
 body form {
   width: 100%;
   max-width: 276px;
   font-weight: 400;
   border-bottom-color: #666666;
   color: #262626;
+}
+body form label {
+  max-width: 320px;
+  width: 205px;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  body form label {
+    width: 276px;
+    margin-left: 0;
+  }
 }
 body form input {
   border: none;
@@ -7648,6 +7814,7 @@ body form input {
 }
 body form input:focus {
   border-bottom-color: #24b1ff;
+  border-bottom-width: 2px;
 }
 body form input:focus-visible {
   outline: none;
@@ -7657,7 +7824,7 @@ body form input:focus-visible {
     width: 276px;
     margin-left: 0;
   }
-  body form input:not(:first-child) {
+  body form input:not(:first-of-type) {
     margin-top: 40px;
   }
 }
@@ -7679,6 +7846,38 @@ body form ::-ms-input-placeholder {
   color: #262626;
   font-weight: 400;
   font-size: 14px;
+}
+body form.send {
+  text-align: left;
+}
+body form.send label {
+  font-size: 10px;
+}
+body form.send input {
+  text-align: left;
+  font-weight: 400;
+}
+body.bg-info form input {
+  border-bottom-color: #fafafa;
+}
+body.bg-info ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fafafa;
+  opacity: 1;
+  font-weight: 700;
+  font-size: 16px;
+}
+body.bg-info :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fafafa;
+  font-weight: 700;
+  font-size: 16px;
+}
+body.bg-info ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fafafa;
+  font-weight: 700;
+  font-size: 16px;
 }
 body.welcome {
   padding-top: 0;
@@ -7991,8 +8190,20 @@ body.download-file .bottomlink {
 body.keys .container > p:first-child {
   margin-bottom: 4px;
 }
+body.keys .links {
+  justify-content: flex-start;
+}
 body.keys hr {
   margin: 60px 0;
+}
+body.keys .key-hidden {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  body.keys .key-hidden {
+    text-align: left;
+    max-width: 480px;
+  }
 }
 body.keys .btn.btn-light {
   color: #262626;
@@ -8022,6 +8233,9 @@ body.user-account .user .darktext, body.user-account .user .marketplace-reps .ma
   max-width: 320px;
   margin: auto;
 }
+body.user-account .btns .btn {
+  display: block;
+}
 body.download-success header h1, body.download-success header .h1 {
   margin-bottom: 40px;
 }
@@ -8030,4 +8244,98 @@ body.download-success .link {
 }
 body.download-success .btns {
   margin-top: 60px;
+}
+body.account-wallet .flex-space {
+  align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  body.account-wallet .flex-space figure.avatar .wallet-balance {
+    font-size: 24px;
+  }
+  body.account-wallet .flex-space figure.avatar .username {
+    font-size: 14px;
+  }
+  body.account-wallet .flex-space figure.avatar.avatar-sm img {
+    width: 60px;
+  }
+}
+body.user-wallet .link, body.user-wallet-send .link {
+  margin-top: 21px;
+}
+body.user-wallet form .input-group, body.user-wallet-send form .input-group {
+  display: flex;
+  flex-direction: column-reverse;
+}
+body.user-wallet form .input-group input:focus + label, body.user-wallet-send form .input-group input:focus + label {
+  color: #24b1ff;
+}
+body.user-wallet-send form.send #rec-address {
+  margin-top: 32px;
+}
+@media screen and (min-width: 768px) {
+  body.user-wallet-send form.send,
+body.user-wallet-send input {
+    width: 600px;
+    max-width: 100%;
+  }
+}
+body.user-wallet-send .btns {
+  margin-top: 180px;
+}
+body.send-confirm .flex-space .btns {
+  margin-top: 180px;
+}
+@media screen and (min-width: 768px) {
+  body.send-confirm .flex-space .btns {
+    margin-top: 60px;
+  }
+}
+body.send-password .flex-space {
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  body.send-password .flex-space .avatar {
+    margin-left: auto;
+  }
+}
+body.send-password .flex-space .avatar img {
+  width: 75px;
+}
+body.send-password .flex-space form input {
+  text-align: center;
+}
+body.send-password .flex-space .btns {
+  margin-top: 50px;
+}
+body.wallet-sent .flex-space .check {
+  margin-top: 40px;
+}
+body.wallet-sent .flex-space .btns {
+  margin-top: 240px;
+}
+body.send-fail header h1, body.send-fail header .h1 {
+  margin-bottom: 30px;
+}
+body.send-fail .btns {
+  margin-top: 80px;
+}
+@media screen and (min-width: 768px) {
+  body.send-fail .btns {
+    margin-top: 190px;
+  }
+}
+@media screen and (min-width: 768px) {
+  body.wallet-receiving .tx-amt span {
+    display: none;
+  }
+  body.wallet-receiving .status span {
+    color: #24b1ff;
+    font-size: 36px;
+    padding-left: 15px;
+    line-height: 24px;
+  }
+  body.wallet-receiving .tx-amt,
+body.wallet-receiving .status {
+    display: inline;
+  }
 }

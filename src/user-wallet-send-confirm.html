@@ -14,23 +14,28 @@
 		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
         <link rel="stylesheet" href="css/style.css">        
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Stop creating user account</title>        
+		<title>Swarm City - Confirm sending</title>        
     </head>
-    <body class="bg-danger py-60 stop-creating">
-        <div class="container">
-            
+    <body class="bg-info send-confirm">
+        <!-- <div class="close">
+            <a href="index.html">
+                <img src="assets/imgs/closeWhite.svg" />
+            </a>
+        </div> -->
+        <div class="container">            
             <main class="flex-space">
                 <header>
                     <h1>
-                        Stop creating user account?
+                        Send <span class="text-warning">10 DAI</span> to this address?
                     </h1>
+                    <p>This can not be undone.</p>
                 </header>
-                <div class="btns">
+                <div class="btns btn-icons">
                     <a class="close" href="#" onclick="history.go(-1)">
                         <img src="assets/imgs/cancel.svg">
                     </a>
-                    <a class="btn-icon" href="user-create-restore.html">
-                        <img src="assets/imgs/checkMarkRed.svg">
+                    <a class="" href="user-wallet-send-password.html">
+                        <img src="assets/imgs/checkMarkNegative.svg">
                     </a>
                 </div>
             </main>

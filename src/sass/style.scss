@@ -48,7 +48,7 @@ body {
     align-items: stretch;
     justify-content: flex-start;
     padding-top: 137px;
-    // padding-bottom: 60px;
+    padding-bottom: 60px;
 
     @media screen and (min-width: 768px) {
         text-align: left;
@@ -57,28 +57,31 @@ body {
     .container {
         position: relative;
         padding: 0 40px 20px 40px;
-        max-width: 992px;
+        max-width: 450px;
+        width: 100%;
 
-        @media screen and (max-width: 767.98px) {
-            width: 100%;
-            max-width: 450px;
+        @media screen and (min-width: 768px) {
+            // margin-left: 0;
+            max-width: 768px;
         }
+            
     }
 
     .close,
-    .en {
+    .en,
+    .icon-exit {
         text-align: right;
         position: absolute;
         top: 16px;
         right: 16px;
         // width: calc(100% + 60px);
         width: 100%;
-        max-width: 992px;
+        max-width: 768px;
         margin: 0 auto;
         z-index: 100;
     
         @media screen and (min-width: 768px) {
-            margin: 0 calc((100% - 992px) / 2);
+            margin: 0 calc((100% - 768px) / 2);
         }
     
         img,
@@ -86,12 +89,17 @@ body {
             padding: 15px;
         }
     }
+    .icon-exit {
+        top: 135px;
+        right: 45px;
+        width: 50px;
+    }
 
     h1 {
         font-weight: 700;
         font-size: 35px;
         margin-bottom: 0;
-        line-height: 1;
+        line-height: 104%;
     }
 
     b {
@@ -107,6 +115,10 @@ body {
         gap: 30px;
         justify-content: center;
     }
+
+    a:not(.link) {
+        text-decoration: none;
+    }
     
     a.link {
         color: $info;
@@ -114,6 +126,11 @@ body {
         text-decoration: none;
         border-bottom: 2px dotted $info;
         display: inline-block;
+
+        &.link-dark {
+            color: $grey3;
+            border-bottom-color: $grey3;
+        }
     }
 
     .darktext {
@@ -163,10 +180,22 @@ body {
         }
     }
 
+    .qrcode {
+        margin-top: 40px;
+        @media screen and (min-width: 768px) {
+            margin-left: 80px;
+        }
+    }
+
     &.bg-info {
         background-color: $info !important;
-        color: $white !important;
     }
+    
+    &.bg-info,
+    &.bg-success,
+    &.bg-danger {
+        color: $white !important; 
+    }    
     
     .btn {
         font-size: 21px;
@@ -223,6 +252,21 @@ body {
         }
     }
 
+    .wallet-balance {
+        color: $yellow;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 100%;
+        .usd {
+            display: block;
+            font-size: 16px;
+            line-height: 20px;
+            @media screen and (min-width: 768px){
+                display: inline;
+            }
+        }        
+    }
+
     figure {
         position: relative;
 
@@ -230,6 +274,31 @@ body {
             display: flex;
             width: 90px;
             margin: 60px auto;
+            @media screen and (min-width: 768px) {
+                margin-left: 0;
+            }
+
+            &.avatar-sm {
+                margin: 0;
+                width: auto;
+                align-items: center;
+                img {
+                    width: 40px;
+                    height: auto;
+                    margin-right: 10px;
+                }
+                figcaption {
+                    text-align: left;
+                    .username {
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 100%;
+                    }
+                    .wallet-balance {
+                        font-size: 22px;
+                    }
+                }
+            }
         }
 
         .btn-icon {
@@ -309,7 +378,11 @@ body {
                     
                     > div:first-child {
                         color: $info;
-                        @extend .largetext;
+                        font-size: 20px;
+                        font-weight: 200;
+                        @media screen and (min-width: 768px) {
+                            font-weight: 400;
+                        }
                     }
                     
                     &:not(:last-child)  {
@@ -332,6 +405,18 @@ body {
         margin: 60px 0;
         min-height: 1px;
         background-color: $grey1b;
+
+        &.short {
+            margin: 47px 0;
+        }
+    }
+
+    .container ~ .divider {
+        margin-top: 40px;
+    }
+
+    .container ~ .divider.short {
+        margin-top: 27px;
     }
 
     main {
@@ -353,6 +438,21 @@ body {
                 width: auto;
                 padding: 11px;
                 margin: 0 auto;
+            }
+
+            &.btn-icons {
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                
+                .close {
+                    margin: 0 !important;
+                }
+                @media screen and (min-width: 768px) {
+                    justify-content: flex-start;
+                }
             }
         }
     
@@ -422,6 +522,68 @@ body {
         background-color: $grey3b;
     }
 
+    .history {
+        min-width: 320px;
+        max-width: 100%;
+        text-align: left;
+
+        .history-item {
+            color: $grey3;
+            font-weight: 300;
+            margin-bottom: 21px;
+            .date {
+                font-size: 10px;
+            }
+            .tx-amt {
+                font-size: 16px;
+                line-height: 17px;
+                margin-top: 2px;
+            }
+            .link {
+                display: inline-block;
+                font-size: 12px;
+                margin-top: 4px;
+                font-weight: 400;
+            }
+            &.pending {
+                .tx-amt {
+                    font-size: 24px;
+                    span {
+                        color: $info;
+                        font-size: 36px;
+                        padding-left: 15px;
+                    }
+                }
+                .status {
+                    font-size: 16px;
+                    @media screen and (min-width: 768px) {
+                        font-size: 24px;
+                    }
+                }
+                .link {
+                    color: $info;
+                    font-weight: 700;
+                }
+            }
+            &.failed {
+                .date,
+                .tx-amt {
+                    color: $red2;
+                }
+                .tx-amt {
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
+            &.pending,
+            &.failed {
+                color: $grey4;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
     form {
         width: 100%;
         max-width: 276px;
@@ -432,6 +594,14 @@ body {
 
         label {
             @extend .label;
+            max-width: 320px;
+            width: 205px;
+            margin: auto;
+
+            @media screen and (min-width: 768px) {
+                width: 276px;
+                margin-left: 0;
+            }
         }
 
         input {
@@ -447,6 +617,7 @@ body {
 
             &:focus {
                 border-bottom-color: $info;
+                border-bottom-width: 2px;
             }
 
             &:focus-visible {
@@ -456,11 +627,10 @@ body {
             @media screen and (min-width: 768px) {
                 width: 276px;
                 margin-left: 0;
-                &:not(:first-child) {
+                &:not(:first-of-type) {
                     margin-top: 40px;
                 }
-            }
-            
+            }            
         }
 
         ::placeholder {
@@ -483,6 +653,48 @@ body {
             color: $black;
             font-weight: 400;
             font-size: 14px;
+        }
+
+        &.send {
+            text-align: left;
+            label {
+                font-size: 10px;
+            }
+            
+            input {
+                text-align: left;
+                font-weight: 400;
+            }
+
+        }
+    }
+
+    &.bg-info {
+        form {
+            input {
+                border-bottom-color: $white;
+            }
+        }
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $white;
+            opacity: 1;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: $white;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: $white;
+            font-weight: 700;
+            font-size: 16px;
         }
     }
 
@@ -877,13 +1089,24 @@ body {
         .container > p:first-child {
             margin-bottom: 4px;
         }
+        .links {
+            justify-content: flex-start;
+        }
         hr {
             margin: 60px 0;
+        }
+        .key-hidden {
+            text-align: center;
+            @media screen and (min-width: 768px) {
+                text-align: left;
+                max-width: 480px;
+            }
         }
         .btn.btn-light {
             color: $black;
             margin-top: 40px;
         }
+        
     }
 
     &.success {
@@ -919,6 +1142,14 @@ body {
                 margin: auto;
             }
         }
+        .btns {
+            .btn {
+                display: block;
+            }
+        }
+        @media screen and (min-width: 768px) {
+
+        }
     }
 
     &.download-success {
@@ -934,7 +1165,151 @@ body {
             margin-top: 60px;
         }
     }
+
+    &.account-wallet {
+        .flex-space {
+            align-items: flex-start;
+            @media screen and (min-width: 768px) {
+                figure.avatar {
+                    .wallet-balance {
+                        font-size: 24px;
+                    }
+                    
+                    .username {
+                        font-size: 14px;
+                    }
+                    
+                    &.avatar-sm {
+                        img {
+                            width: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.user-wallet,
+    &.user-wallet-send {
+        .link {
+            margin-top: 21px;
+        }   
+        form {
+            .input-group {
+                display: flex;
+                flex-direction: column-reverse;
+                input:focus + label {
+                    color: $info;
+                }
+            }
+        }     
+    }
+
+    &.user-wallet-send {
+        form.send {
+            #rec-address {
+                margin-top: 32px;
+            }
+        }
+        form.send,
+        input {
+            @media screen and (min-width: 768px) {
+                width: 600px;
+                max-width: 100%;
+            }
+        }
+        .btns {
+            margin-top: 180px;
+        }
+    }
+
+    &.send-confirm {
+        .flex-space {
+            .btns {
+                margin-top: 180px;
+                @media screen and (min-width: 768px) {
+                    margin-top: 60px;
+                }
+            }
+        }
+    }
+
+    &.send-password {
+        .flex-space {
+            align-items: center;
+            .avatar {
+                @media screen and (min-width: 768px) {
+                    margin-left: auto;
+                }
+                img {
+                    width: 75px;
+                }
+            }
+            form {
+                input {
+                    text-align: center;
+                }
+            }
+            .btns {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    &.wallet-sent {
+        .flex-space {
+            .check {
+                margin-top: 40px;
+            }
+            .btns {
+                margin-top: 240px;
+            }
+        }
+    }
+
+    &.send-fail {
+        header {
+            h1 {
+                margin-bottom: 30px;
+            }
+        }
+        .btns {
+            margin-top: 80px;
+            @media screen and (min-width: 768px) {
+                margin-top: 190px;
+            }
+        }
+    }
+
+    &.wallet-receiving {
+        .status {
+            // display: none;
+        }
+        @media screen and (min-width: 768px){
+            .tx-amt {
+                span {
+                    display: none;
+                }
+            }
+            .status {
+                span {color: #24b1ff;
+                    font-size: 36px;
+                    padding-left: 15px;
+                    line-height: 24px;
+                }
+            }
+            .tx-amt,
+            .status {
+                display: inline;
+            }
+        }
+    }
 }
 
+// @media screen and (min-width: 768px)
 
+// background-image: url("../assets/temp/user-wallet-sent.png");
+// background-repeat: no-repeat;
+// background-position: top center;
 
+// <a href="#" onclick="history.go(-1)">
