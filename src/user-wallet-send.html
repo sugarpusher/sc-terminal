@@ -16,96 +16,100 @@
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
 		<title>Swarm City - Send</title>        
     </head>
-    <body class="bg-gray-lt user-wallet-send">
-        <div class="close">
-            <a href="user-wallet.html">
-                <img src="assets/imgs/close.svg" />
-            </a>
-        </div>
-        <div class="container">
-            <div class="flex-space">                
-                <div class="wallet-balance">
-                    44 DAI
-                    <span class="usd">
-                        ≈ 44 USD
-                    </span>
-                </div>
-                <div>
-                    <a href="#" class="link link-dark">
-                        show my keys
+    <body>
+        <div id="app">
+            <div class="bg-gray-lt user-wallet-send">
+                <div class="close">
+                    <a href="user-wallet.html">
+                        <img src="assets/imgs/close.svg" />
                     </a>
-                </div>                
-            </div>
-        </div>
-        <div class="divider short"></div>
-        <div class="container">
-            <div class="flex-space">
-                <form class="send">
-                    <div class="input-group">
-                        <input type="text" id="amt-send">
-                        <label for="amt-send">Amount to send</label>
-                    </div>
-                    <!-- <label for="rec-address">Receiver's address</label> -->
-                    <input type="text" id="rec-address" placeholder="Receiver's address">
-                    <div class="btns btn-icons">
-                        <a class="close" href="#" onclick="history.go(-1)">
-                            <img src="assets/imgs/cancel.svg">
-                        </a>
-                        <a class="btn-icon" href="user-wallet-send-confirm.html">
-                            <img src="assets/imgs/caretNext.svg">
-                        </a>
-                    </div>
-                </form>    
-            </div>
-        </div>
-        <div class="divider short"></div>
-        <div class="container">
-            <div class="flex-space">
-                <div class="history">
-                    <div class="history-item">
-                        <div class="date">
-                            13 Jan 2022 - 22:33
-                        </div>
-                        <div class="tx-amt">
-                            Received 7 DAI from 0x0...
+                </div>
+                <div class="container">
+                    <div class="flex-space">                
+                        <div class="wallet-balance">
+                            44 DAI
+                            <span class="usd">
+                                ≈ 44 USD
+                            </span>
                         </div>
                         <div>
                             <a href="#" class="link link-dark">
-                                show on etherscan
+                                show my keys
                             </a>
-                        </div>
+                        </div>                
                     </div>
-                    <div class="history-item">
-                        <div class="date">
-                            09 Jan 2022 - 22:33
-                        </div>
-                        <div class="tx-amt">
-                            Sent 18 DAI to 0x0...
-                        </div>
-                        <div>
-                            <a href="#" class="link link-dark">
-                                show on etherscan
-                            </a>
-                        </div>
+                </div>
+                <div class="divider short"></div>
+                <div class="container">
+                    <div class="flex-space">
+                        <form class="send">
+                            <div class="input-group">
+                                <input type="text" id="amt-send">
+                                <label for="amt-send">Amount to send</label>
+                            </div>
+                            <!-- <label for="rec-address">Receiver's address</label> -->
+                            <input type="text" id="rec-address" placeholder="Receiver's address">
+                            <div class="btns btn-icons">
+                                <a class="close" href="#" onclick="history.go(-1)">
+                                    <img src="assets/imgs/cancel.svg">
+                                </a>
+                                <a class="btn-icon" href="user-wallet-send-confirm.html">
+                                    <img src="assets/imgs/caretNext.svg">
+                                </a>
+                            </div>
+                        </form>    
                     </div>
-                    <div class="history-item">
-                        <div class="date">
-                            01 Dec 2021 - 19:03
-                        </div>
-                        <div class="tx-amt">
-                            Received 7 DAI from 0x0...
-                        </div>
-                        <div>
-                            <a href="#" class="link link-dark">
-                                show on etherscan
-                            </a>
+                </div>
+                <div class="divider short"></div>
+                <div class="container">
+                    <div class="flex-space">
+                        <div class="history">
+                            <div class="history-item">
+                                <div class="date">
+                                    13 Jan 2022 - 22:33
+                                </div>
+                                <div class="tx-amt">
+                                    Received 7 DAI from 0x0...
+                                </div>
+                                <div>
+                                    <a href="#" class="link link-dark">
+                                        show on etherscan
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="history-item">
+                                <div class="date">
+                                    09 Jan 2022 - 22:33
+                                </div>
+                                <div class="tx-amt">
+                                    Sent 18 DAI to 0x0...
+                                </div>
+                                <div>
+                                    <a href="#" class="link link-dark">
+                                        show on etherscan
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="history-item">
+                                <div class="date">
+                                    01 Dec 2021 - 19:03
+                                </div>
+                                <div class="tx-amt">
+                                    Received 7 DAI from 0x0...
+                                </div>
+                                <div>
+                                    <a href="#" class="link link-dark">
+                                        show on etherscan
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- Bootstrap JS, uncomment if needed -->
+                <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+
             </div>
         </div>
-        <!-- Bootstrap JS, uncomment if needed -->
-        <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
-
     </body>
 </html>

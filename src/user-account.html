@@ -16,67 +16,71 @@
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
 		<title>Swarm City - User Account</title>        
     </head>
-    <body class="bg-gray-lt user-account">
-        <div class="close">
-            <a href="#" onclick="history.go(-1)">
-                <img src="assets/imgs/close.svg" />
-            </a>
-        </div>
-        <div class="container">            
-            <main class="flex-space">
-                <figure class="avatar">
-                    <a href="user-create-avatar.html">
-                        <img src="assets/imgs/avatar.svg" alt="user avatar">
+    <body>
+        <div id="app">
+            <div class="bg-gray-lt user-account">
+                <div class="close">
+                    <a href="#" onclick="history.go(-1)">
+                        <img src="assets/imgs/close.svg" />
                     </a>
-                    <!-- <a class="btn-icon btn-info btn-upload" href="user-create-avatar.html">
-                        <img src="assets/imgs/arrowUp.svg">
-                    </a> -->
-                </figure>
-                <div class="user">
-                    <div class="label">Username</div>
-                    <div class="darktext">Tester X</div>
                 </div>
-                <a href="#" class="link">show on etherscan</a>
+                <div class="container">            
+                    <main class="flex-space">
+                        <figure class="avatar">
+                            <a href="user-create-avatar.html">
+                                <img src="assets/imgs/avatar.svg" alt="user avatar">
+                            </a>
+                            <!-- <a class="btn-icon btn-info btn-upload" href="user-create-avatar.html">
+                                <img src="assets/imgs/arrowUp.svg">
+                            </a> -->
+                        </figure>
+                        <div class="user">
+                            <div class="label">Username</div>
+                            <div class="darktext">Tester X</div>
+                        </div>
+                        <a href="#" class="link">show on etherscan</a>
 
-                <div class="marketplace-reps">
-                    <div class="marketplace">
-                        <div class="title">
-                            #Settler
-                        </div>
-                        <div class="reps">
-                            <div class="rep">
-                                <div>
-                                    11 SWR
+                        <div class="marketplace-reps">
+                            <div class="marketplace">
+                                <div class="title">
+                                    #Settler
                                 </div>
-                                <p>as a Seeker</p>
-                            </div>
-                            <div class="rep">
-                                <div>
-                                    0 SWR
+                                <div class="reps">
+                                    <div class="rep">
+                                        <div>
+                                            11 SWR
+                                        </div>
+                                        <p>as a Seeker</p>
+                                    </div>
+                                    <div class="rep">
+                                        <div>
+                                            0 SWR
+                                        </div>
+                                        <p>as a Provider</p>
+                                    </div>
                                 </div>
-                                <p>as a Provider</p>
                             </div>
                         </div>
+                    </main>
+                </div>
+                <div class="divider"></div>
+                <div class="container">
+                    <div class="btns">
+                        <a class="btn btn-light" href="#">
+                            logout this user
+                        </a>
+                        <a class="btn btn-light" href="#">
+                            backup this user
+                        </a>                    
+                        <a class="btn btn-light btn-error" href="#">
+                            delete this user
+                        </a>
                     </div>
                 </div>
-            </main>
-        </div>
-        <div class="divider"></div>
-        <div class="container">
-            <div class="btns">
-                <a class="btn btn-light" href="#">
-                    logout this user
-                </a>
-                <a class="btn btn-light" href="#">
-                    backup this user
-                </a>                    
-                <a class="btn btn-light btn-error" href="#">
-                    delete this user
-                </a>
+                <!-- Bootstrap JS, uncomment if needed -->
+                <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+
             </div>
         </div>
-        <!-- Bootstrap JS, uncomment if needed -->
-        <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
-
     </body>
 </html>

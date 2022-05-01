@@ -16,43 +16,47 @@
 		<!-- <link rel="manifest" href="/manifest.json" /> -->
 		<title>Swarm City - Choose a username and an avatar</title>        
     </head>
-    <body class="bg-gray-lt choose-username">
-        <div class="close">
-            <a href="user-create-stop.html">
-                <img src="assets/imgs/close.svg" />
-            </a>
-        </div>
-        <div class="container">
-            
-            <main class="flex-space">
-                <header>
-                    <h1>
-                        Choose a username and an avatar.
-                    </h1>
-                </header>
-                <div class="content">
-                    <figure class="avatar">
-                        <a href="user-create-avatar.html">
-                            <img src="assets/imgs/avatar.svg" alt="user avatar">
-                        </a>
-                        <a class="btn-icon btn-info btn-upload" href="user-create-avatar.html">
-                            <img src="assets/imgs/arrowUp.svg">
-                        </a>
-                    </figure>
-                    <form>
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" id="username">
-                    </form>
-                </div>
-                <div class="btns">
-                    <a class="btn-icon" href="user-create-password.html">
-                        <img src="assets/imgs/caretNext.svg">
+    <body>
+        <div id="app">
+            <div class="bg-gray-lt choose-username">
+                <div class="close">
+                    <a href="user-create-stop.html">
+                        <img src="assets/imgs/close.svg" />
                     </a>
                 </div>
-            </main>
-        </div>
-        <!-- Bootstrap JS, uncomment if needed -->
-        <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+                <div class="container">
+                    
+                    <main class="flex-space">
+                        <header>
+                            <h1>
+                                Choose a username and an avatar.
+                            </h1>
+                        </header>
+                        <div class="content">
+                            <figure class="avatar">
+                                <a href="user-create-avatar.html">
+                                    <img src="assets/imgs/avatar.svg" alt="user avatar">
+                                </a>
+                                <a class="btn-icon btn-info btn-upload" href="user-create-avatar.html">
+                                    <img src="assets/imgs/arrowUp.svg">
+                                </a>
+                            </figure>
+                            <form>
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="username">
+                            </form>
+                        </div>
+                        <div class="btns">
+                            <a class="btn-icon" href="user-create-password.html">
+                                <img src="assets/imgs/caretNext.svg">
+                            </a>
+                        </div>
+                    </main>
+                </div>
+                <!-- Bootstrap JS, uncomment if needed -->
+                <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
 
+            </div>
+        </div>
     </body>
 </html>

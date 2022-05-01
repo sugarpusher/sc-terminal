@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700;800;900&display=swap");
-.baseShadow, body .btn-icon, body .btn {
+.baseShadow, body #app .btn-icon, body #app .btn {
   box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
@@ -7296,11 +7296,11 @@ progress {
     display: none !important;
   }
 }
-.py-60, body.welcome address {
+.py-60, body #app .welcome address {
   padding: 60px 0;
 }
 
-.py-40, body.welcome .links {
+.py-40, body #app .welcome .links {
   padding: 40px 0;
 }
 
@@ -7315,32 +7315,38 @@ body {
   text-align: center;
   font-size: 12px;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  padding-top: 137px;
-  padding-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   body {
     text-align: left;
   }
 }
-body .container {
+body #app {
+  height: 100% !important;
+}
+body #app > div {
+  padding-top: 137px;
+  padding-bottom: 60px;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+body #app .container {
   position: relative;
   padding: 0 40px 20px 40px;
   max-width: 450px;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  body .container {
+  body #app .container {
     max-width: 768px;
   }
 }
-body .close,
-body .en,
-body .icon-exit {
+body #app .close,
+body #app .en,
+body #app .icon-exit {
   text-align: right;
   position: absolute;
   top: 16px;
@@ -7351,57 +7357,57 @@ body .icon-exit {
   z-index: 100;
 }
 @media screen and (min-width: 768px) {
-  body .close,
-body .en,
-body .icon-exit {
+  body #app .close,
+body #app .en,
+body #app .icon-exit {
     margin: 0 calc((100% - 768px) / 2);
   }
 }
-body .close img,
-body .close svg,
-body .en img,
-body .en svg,
-body .icon-exit img,
-body .icon-exit svg {
+body #app .close img,
+body #app .close svg,
+body #app .en img,
+body #app .en svg,
+body #app .icon-exit img,
+body #app .icon-exit svg {
   padding: 15px;
 }
-body .icon-exit {
+body #app .icon-exit {
   top: 135px;
   right: 45px;
   width: 50px;
 }
-body h1, body .h1 {
+body #app h1, body #app .h1 {
   font-weight: 700;
   font-size: 35px;
   margin-bottom: 0;
   line-height: 104%;
 }
-body b {
+body #app b {
   font-weight: 700;
 }
-body .fw-100 {
+body #app .fw-100 {
   font-weight: 100;
 }
-body .links {
+body #app .links {
   display: flex;
   gap: 30px;
   justify-content: center;
 }
-body a:not(.link) {
+body #app a:not(.link) {
   text-decoration: none;
 }
-body a.link {
+body #app a.link {
   color: #24b1ff;
   font-weight: 700;
   text-decoration: none;
   border-bottom: 2px dotted #24b1ff;
   display: inline-block;
 }
-body a.link.link-dark {
+body #app a.link.link-dark {
   color: #666666;
   border-bottom-color: #666666;
 }
-body .darktext, body.user-account .user .darktext, body.user-account .user form input, body.user-account form .user input, body form input, body .marketplace-reps .marketplace .title {
+body #app .darktext, body #app .user-account .user .darktext, body #app .user-account .user form input, body #app form .user-account .user input, body #app form input, body #app .marketplace-reps .marketplace .title {
   color: #333333;
   font-weight: 700;
   font-size: 16px;
@@ -7409,55 +7415,57 @@ body .darktext, body.user-account .user .darktext, body.user-account .user form 
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  body .darktext, body.user-account .user .darktext, body.user-account .user form input, body.user-account form .user input, body form input, body .marketplace-reps .marketplace .title {
+  body #app .darktext, body #app .user-account .user .darktext, body #app .user-account .user form input, body #app form .user-account .user input, body #app form input, body #app .marketplace-reps .marketplace .title {
     font-size: 21px;
     text-align: left;
     margin-left: 0;
   }
 }
-body .errortext, body .btn-error {
+body #app .errortext, body #app .btn-error {
   color: #d0021b !important;
 }
-body .largetext, body .key {
+body #app .largetext, body #app .key {
   font-size: 20px;
   font-weight: 200;
 }
-body .label, body form label {
+body #app .label, body #app form label {
   display: block;
   font-size: 11px;
   font-weight: 700;
   color: #666666;
 }
 @media screen and (min-width: 768px) {
-  body .label, body form label {
+  body #app .label, body #app form label {
     font-size: 16px;
   }
 }
-body .key {
+body #app .key {
   word-break: break-all;
   text-align: left;
   margin-bottom: 20px;
 }
-body .key.key-hidden {
+body #app .key.key-hidden {
   font-weight: 300;
   word-break: normal;
   text-align: center;
 }
-body .qrcode {
+body #app .qrcode {
   margin-top: 40px;
 }
 @media screen and (min-width: 768px) {
-  body .qrcode {
+  body #app .qrcode {
     margin-left: 80px;
   }
 }
-body.bg-info {
+body #app .bg-info {
   background-color: #24b1ff !important;
 }
-body.bg-info, body.bg-success, body.bg-danger {
+body #app .bg-info,
+body #app .bg-success,
+body #app .bg-danger {
   color: #fafafa !important;
 }
-body .btn {
+body #app .btn {
   font-size: 21px;
   padding: 24px;
   width: 320px;
@@ -7466,27 +7474,27 @@ body .btn {
   border-radius: 2px;
   margin-bottom: 10px;
 }
-body .btn span {
+body #app .btn span {
   display: block;
   font-weight: 100;
   font-size: 10px;
 }
-body .btn-darker {
+body #app .btn-darker {
   background-color: rgba(0, 0, 0, 0.15);
   border-color: transparent;
   color: #fafafa;
 }
-body .btn-info {
+body #app .btn-info {
   background-color: #44a1d5;
   border-color: #44a1d5;
   color: #fafafa;
   display: block;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15), inset 0px 1px 2px rgba(255, 255, 255, 0.15);
 }
-body .btn-light {
+body #app .btn-light {
   color: #24b1ff;
 }
-body .btn-icon {
+body #app .btn-icon {
   border-radius: 50%;
   width: 70px;
   height: 70px;
@@ -7495,72 +7503,72 @@ body .btn-icon {
   justify-content: center;
   background-color: #fafafa;
 }
-body .btn-icon.btn-info {
+body #app .btn-icon.btn-info {
   background-color: #24b1ff;
 }
-body .wallet-balance {
+body #app .wallet-balance {
   color: #efd96f;
   font-size: 36px;
   font-weight: 700;
   line-height: 100%;
 }
-body .wallet-balance .usd {
+body #app .wallet-balance .usd {
   display: block;
   font-size: 16px;
   line-height: 20px;
 }
 @media screen and (min-width: 768px) {
-  body .wallet-balance .usd {
+  body #app .wallet-balance .usd {
     display: inline;
   }
 }
-body figure {
+body #app figure {
   position: relative;
 }
-body figure.avatar {
+body #app figure.avatar {
   display: flex;
   width: 90px;
   margin: 60px auto;
 }
 @media screen and (min-width: 768px) {
-  body figure.avatar {
+  body #app figure.avatar {
     margin-left: 0;
   }
 }
-body figure.avatar.avatar-sm {
+body #app figure.avatar.avatar-sm {
   margin: 0;
   width: auto;
   align-items: center;
 }
-body figure.avatar.avatar-sm img {
+body #app figure.avatar.avatar-sm img {
   width: 40px;
   height: auto;
   margin-right: 10px;
 }
-body figure.avatar.avatar-sm figcaption {
+body #app figure.avatar.avatar-sm figcaption {
   text-align: left;
 }
-body figure.avatar.avatar-sm figcaption .username {
+body #app figure.avatar.avatar-sm figcaption .username {
   font-size: 12px;
   font-weight: 700;
   line-height: 100%;
 }
-body figure.avatar.avatar-sm figcaption .wallet-balance {
+body #app figure.avatar.avatar-sm figcaption .wallet-balance {
   font-size: 22px;
 }
-body figure .btn-icon {
+body #app figure .btn-icon {
   position: absolute;
   right: -10px;
   bottom: 0;
 }
-body figure .btn-icon.btn-info {
+body #app figure .btn-icon.btn-info {
   background-color: #24b1ff;
 }
-body figure .btn-icon.btn-upload {
+body #app figure .btn-icon.btn-upload {
   width: 30px;
   height: 30px;
 }
-body .warning-box {
+body #app .warning-box {
   margin-top: 80px;
   margin-bottom: 60px;
   background-color: #fafafa;
@@ -7569,143 +7577,143 @@ body .warning-box {
   font-size: 16px;
   font-weight: 700;
 }
-body .warning-box img {
+body #app .warning-box img {
   position: absolute;
   left: 50%;
   top: 0;
   transform: translate(-50%, -50%);
 }
-body .warning-box p:last-child {
+body #app .warning-box p:last-child {
   margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
-  body .warning-box {
+  body #app .warning-box {
     display: flex;
     align-items: flex-start;
     gap: 30px;
     max-width: 450px;
   }
-  body .warning-box img {
+  body #app .warning-box img {
     position: unset;
     transform: none;
   }
 }
-body .marketplace-reps {
+body #app .marketplace-reps {
   align-self: self-start;
   max-width: 320px;
   margin: 40px auto 0;
 }
 @media screen and (min-width: 768px) {
-  body .marketplace-reps {
+  body #app .marketplace-reps {
     margin-left: 0;
   }
 }
-body .marketplace-reps .marketplace .title {
+body #app .marketplace-reps .marketplace .title {
   text-align: left;
 }
-body .marketplace-reps .marketplace .reps {
+body #app .marketplace-reps .marketplace .reps {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
 }
-body .marketplace-reps .marketplace .reps .rep p {
+body #app .marketplace-reps .marketplace .reps .rep p {
   margin-bottom: 0;
 }
-body .marketplace-reps .marketplace .reps .rep > div:first-child {
+body #app .marketplace-reps .marketplace .reps .rep > div:first-child {
   color: #24b1ff;
   font-size: 20px;
   font-weight: 200;
 }
 @media screen and (min-width: 768px) {
-  body .marketplace-reps .marketplace .reps .rep > div:first-child {
+  body #app .marketplace-reps .marketplace .reps .rep > div:first-child {
     font-weight: 400;
   }
 }
-body .marketplace-reps .marketplace .reps .rep:not(:last-child) {
+body #app .marketplace-reps .marketplace .reps .rep:not(:last-child) {
   padding-right: 15px;
   margin-right: 15px;
   border-right: 1px dotted #bfbfbf;
 }
-body .bottomlink {
+body #app .bottomlink {
   margin-top: 84px;
 }
-body .divider {
+body #app .divider {
   width: 100%;
   height: 1px;
   margin: 60px 0;
   min-height: 1px;
   background-color: #e6e6e6;
 }
-body .divider.short {
+body #app .divider.short {
   margin: 47px 0;
 }
-body .container ~ .divider {
+body #app .container ~ .divider {
   margin-top: 40px;
 }
-body .container ~ .divider.short {
+body #app .container ~ .divider.short {
   margin-top: 27px;
 }
-body main {
+body #app main {
   display: flex;
 }
-body .flex-space {
+body #app .flex-space {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-body .flex-space .btns .close {
+body #app .flex-space .btns .close {
   position: unset;
   width: auto;
   padding: 11px;
   margin: 0 auto;
 }
-body .flex-space .btns.btn-icons {
+body #app .flex-space .btns.btn-icons {
   margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
 }
-body .flex-space .btns.btn-icons .close {
+body #app .flex-space .btns.btn-icons .close {
   margin: 0 !important;
 }
 @media screen and (min-width: 768px) {
-  body .flex-space .btns.btn-icons {
+  body #app .flex-space .btns.btn-icons {
     justify-content: flex-start;
   }
 }
 @media screen and (min-width: 768px) {
-  body .flex-space {
+  body #app .flex-space {
     text-align: left;
     align-items: flex-start;
   }
 }
-body header p {
+body #app header p {
   max-width: 500px;
   font-weight: 300;
   font-size: 14px;
   margin-top: 5px;
 }
 @media screen and (min-width: 768px) {
-  body header h1, body header .h1 {
+  body #app header h1, body #app header .h1 {
     font-size: 55px;
     font-weight: 800;
   }
-  body header p {
+  body #app header p {
     font-size: 16px;
     font-weight: 300;
   }
 }
-body.bg-gray-lt {
+body #app .bg-gray-lt {
   background-color: #f2f2f2;
 }
-body.bg-gray-lt header h1, body.bg-gray-lt header .h1 {
+body #app .bg-gray-lt header h1, body #app .bg-gray-lt header .h1 {
   color: #666666;
 }
-body.bg-gray-lt .username {
+body #app .bg-gray-lt .username {
   color: #262626;
   font-weight: 700;
   font-size: 16px;
@@ -7714,95 +7722,95 @@ body.bg-gray-lt .username {
   margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
-  body.bg-gray-lt .username {
+  body #app .bg-gray-lt .username {
     font-size: 21px;
   }
 }
-body.bg-gray-lt .wallet {
+body #app .bg-gray-lt .wallet {
   font-weight: 300;
   font-size: 12px;
   color: #acacac;
 }
-body.bg-gray-md {
+body #app .bg-gray-md {
   background-color: #e6e6e6;
 }
-body.bg-gray-dk {
+body #app .bg-gray-dk {
   background-color: #acacac;
 }
-body .history {
+body #app .history {
   min-width: 320px;
   max-width: 100%;
   text-align: left;
 }
-body .history .history-item {
+body #app .history .history-item {
   color: #666666;
   font-weight: 300;
   margin-bottom: 21px;
 }
-body .history .history-item .date {
+body #app .history .history-item .date {
   font-size: 10px;
 }
-body .history .history-item .tx-amt {
+body #app .history .history-item .tx-amt {
   font-size: 16px;
   line-height: 17px;
   margin-top: 2px;
 }
-body .history .history-item .link {
+body #app .history .history-item .link {
   display: inline-block;
   font-size: 12px;
   margin-top: 4px;
   font-weight: 400;
 }
-body .history .history-item.pending .tx-amt {
+body #app .history .history-item.pending .tx-amt {
   font-size: 24px;
 }
-body .history .history-item.pending .tx-amt span {
+body #app .history .history-item.pending .tx-amt span {
   color: #24b1ff;
   font-size: 36px;
   padding-left: 15px;
 }
-body .history .history-item.pending .status {
+body #app .history .history-item.pending .status {
   font-size: 16px;
 }
 @media screen and (min-width: 768px) {
-  body .history .history-item.pending .status {
+  body #app .history .history-item.pending .status {
     font-size: 24px;
   }
 }
-body .history .history-item.pending .link {
+body #app .history .history-item.pending .link {
   color: #24b1ff;
   font-weight: 700;
 }
-body .history .history-item.failed .date,
-body .history .history-item.failed .tx-amt {
+body #app .history .history-item.failed .date,
+body #app .history .history-item.failed .tx-amt {
   color: #d0021b;
 }
-body .history .history-item.failed .tx-amt span {
+body #app .history .history-item.failed .tx-amt span {
   font-weight: 700;
 }
-body .history .history-item.pending, body .history .history-item.failed {
+body #app .history .history-item.pending, body #app .history .history-item.failed {
   color: #333333;
   margin-bottom: 40px;
 }
-body form {
+body #app form {
   width: 100%;
   max-width: 276px;
   font-weight: 400;
   border-bottom-color: #666666;
   color: #262626;
 }
-body form label {
+body #app form label {
   max-width: 320px;
   width: 205px;
   margin: auto;
 }
 @media screen and (min-width: 768px) {
-  body form label {
+  body #app form label {
     width: 276px;
     margin-left: 0;
   }
 }
-body form input {
+body #app form input {
   border: none;
   background-color: transparent;
   border-bottom: 1px solid #333333;
@@ -7812,100 +7820,100 @@ body form input {
   width: 205px;
   margin: auto;
 }
-body form input:focus {
+body #app form input:focus {
   border-bottom-color: #24b1ff;
   border-bottom-width: 2px;
 }
-body form input:focus-visible {
+body #app form input:focus-visible {
   outline: none;
 }
 @media screen and (min-width: 768px) {
-  body form input {
+  body #app form input {
     width: 276px;
     margin-left: 0;
   }
-  body form input:not(:first-of-type) {
+  body #app form input:not(:first-of-type) {
     margin-top: 40px;
   }
 }
-body form ::placeholder {
+body #app form ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #262626;
   opacity: 1;
   font-weight: 400;
   font-size: 14px;
 }
-body form :-ms-input-placeholder {
+body #app form :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #262626;
   font-weight: 400;
   font-size: 14px;
 }
-body form ::-ms-input-placeholder {
+body #app form ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #262626;
   font-weight: 400;
   font-size: 14px;
 }
-body form.send {
+body #app form.send {
   text-align: left;
 }
-body form.send label {
+body #app form.send label {
   font-size: 10px;
 }
-body form.send input {
+body #app form.send input {
   text-align: left;
   font-weight: 400;
 }
-body.bg-info form input {
+body #app .bg-info form input {
   border-bottom-color: #fafafa;
 }
-body.bg-info ::placeholder {
+body #app .bg-info ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #fafafa;
   opacity: 1;
   font-weight: 700;
   font-size: 16px;
 }
-body.bg-info :-ms-input-placeholder {
+body #app .bg-info :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #fafafa;
   font-weight: 700;
   font-size: 16px;
 }
-body.bg-info ::-ms-input-placeholder {
+body #app .bg-info ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #fafafa;
   font-weight: 700;
   font-size: 16px;
 }
-body.welcome {
+body #app .welcome {
   padding-top: 0;
   background-color: #f2f2f2;
   display: block;
 }
-body.welcome .container {
+body #app .welcome .container {
   padding-bottom: 0;
 }
-body.welcome .en {
+body #app .welcome .en {
   text-align: right;
   font-weight: 700;
   font-size: 11px;
   padding: 15px;
 }
-body.welcome .en a {
+body #app .welcome .en a {
   color: #262626;
   padding: 2px;
   text-decoration: none;
   border-bottom: 2px solid #262626;
 }
-body.welcome main {
+body #app .welcome main {
   min-height: 530px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-body.welcome main .d-flex {
+body #app .welcome main .d-flex {
   justify-content: space-between;
   align-content: center;
   margin-bottom: 46px;
@@ -7914,155 +7922,159 @@ body.welcome main .d-flex {
   text-align: center;
 }
 @media (min-width: 768px) {
-  body.welcome main .d-flex {
+  body #app .welcome main .d-flex {
     flex-direction: row;
     align-items: self-end;
     text-align: left;
   }
 }
-body.welcome main #logo {
+body #app .welcome main #logo {
   width: 78px;
   display: inline-block;
   margin-bottom: 50px;
 }
 @media screen and (min-width: 768px) {
-  body.welcome main #logo {
+  body #app .welcome main #logo {
     width: 68px;
   }
 }
-body.welcome main h1, body.welcome main .h1 {
+body #app .welcome main h1, body #app .welcome main .h1 {
   font-weight: 300;
   max-width: 375px;
   font-size: 22px;
   line-height: 1.2;
 }
 @media screen and (min-width: 768px) {
-  body.welcome main h1, body.welcome main .h1 {
+  body #app .welcome main h1, body #app .welcome main .h1 {
     font-size: 30px;
     line-height: 0.9;
   }
 }
 @media screen and (min-width: 992px) {
-  body.welcome main h1, body.welcome main .h1 {
+  body #app .welcome main h1, body #app .welcome main .h1 {
     font-size: 34px;
   }
 }
-body.welcome main h1 span, body.welcome main .h1 span {
+body #app .welcome main h1 span, body #app .welcome main .h1 span {
   font-weight: 700;
   font-size: 35px;
 }
 @media screen and (min-width: 768px) {
-  body.welcome main h1 span, body.welcome main .h1 span {
+  body #app .welcome main h1 span, body #app .welcome main .h1 span {
     font-size: 64px;
     display: block;
   }
 }
 @media screen and (min-width: 992px) {
-  body.welcome main h1 span, body.welcome main .h1 span {
+  body #app .welcome main h1 span, body #app .welcome main .h1 span {
     font-size: 78px;
   }
 }
-body.welcome main .btn-warning {
+body #app .welcome main .btn-warning {
   margin-top: 70px;
   padding: 32px;
 }
 @media screen and (min-width: 768px) {
-  body.welcome main .btn-warning {
+  body #app .welcome main .btn-warning {
     margin-top: 0;
   }
 }
-body.welcome .links {
+body #app .welcome .links {
   font-size: 12px;
   text-align: left;
 }
-body.welcome .links span {
+body #app .welcome .links span {
   display: block;
 }
-body.welcome .links span .link {
+body #app .welcome .links span .link {
   padding: 0;
   margin: 8px 32px 8px 0;
 }
-body.welcome .links span .link::after {
+body #app .welcome .links span .link::after {
   left: 16px;
   width: calc(100% - 32px);
   bottom: 8px;
 }
 @media screen and (min-width: 768px) {
-  body.welcome .links span {
+  body #app .welcome .links span {
     display: inline;
   }
-  body.welcome .links span .link {
+  body #app .welcome .links span .link {
     margin: 0 32px 0 0;
   }
-  body.welcome .links span .link::after {
+  body #app .welcome .links span .link::after {
     bottom: 16px;
   }
 }
-body.welcome address {
+body #app .welcome address {
   font-size: 14px;
   text-align: left;
 }
-body.welcome address .container div {
+body #app .welcome address .container div {
   margin-left: -4px;
 }
-body.welcome address .container a {
+body #app .welcome address .container a {
   display: inline-block;
   border: none;
   color: #262626;
   text-decoration: none;
 }
-body.create-account .btns {
+body #app .create-account .btns {
   margin-top: 170px;
 }
-body.choose-username main .content {
+body #app .choose-username main .content {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  body.choose-username main .content {
+  body #app .choose-username main .content {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
   }
-  body.choose-username main .content .avatar {
+  body #app .choose-username main .content .avatar {
     margin-left: 0;
     margin-right: 40px;
   }
-  body.choose-username main .content input {
+  body #app .choose-username main .content input {
     text-align: left;
   }
 }
 @media screen and (min-width: 768px) {
-  body.choose-username main .btns {
+  body #app .choose-username main .btns {
     margin-left: 0;
   }
 }
-body.choose-username .btns {
+body #app .choose-username .btns {
   margin: auto;
   margin-top: 80px;
 }
-body.stop-creating, body.exit {
+body #app .stop-creating,
+body #app .exit {
   color: #fafafa;
 }
 @media screen and (min-width: 768px) {
-  body.stop-creating .flex-space, body.exit .flex-space {
+  body #app .stop-creating .flex-space,
+body #app .exit .flex-space {
     align-items: flex-start;
   }
 }
-body.stop-creating .btns, body.exit .btns {
+body #app .stop-creating .btns,
+body #app .exit .btns {
   margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
-body.stop-creating .btns .close, body.exit .btns .close {
+body #app .stop-creating .btns .close,
+body #app .exit .btns .close {
   cursor: pointer;
 }
-body.set-avatar {
+body #app .set-avatar {
   padding-top: 80px;
 }
-body.set-avatar .flex-space header .canvas {
+body #app .set-avatar .flex-space header .canvas {
   background-color: #262626;
   width: 250px;
   height: 250px;
@@ -8071,63 +8083,63 @@ body.set-avatar .flex-space header .canvas {
   justify-content: center;
   align-items: center;
 }
-body.set-avatar .flex-space header .canvas .avatar img {
+body #app .set-avatar .flex-space header .canvas .avatar img {
   outline: 5px solid #24b1ff;
   border-radius: 50%;
   margin: -1px;
 }
-body.set-avatar .flex-space header .canvas .rotate {
+body #app .set-avatar .flex-space header .canvas .rotate {
   position: absolute;
   right: 18px;
   bottom: 18px;
 }
-body.set-avatar .flex-space header p {
+body #app .set-avatar .flex-space header p {
   font-size: 12px;
   font-weight: 700;
   margin-top: 16px;
 }
 @media screen and (min-width: 768px) {
-  body.set-avatar .flex-space header p {
+  body #app .set-avatar .flex-space header p {
     font-size: 18px;
   }
 }
-body.set-avatar .flex-space .btns {
+body #app .set-avatar .flex-space .btns {
   margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media (min-width: 768px) {
-  body.set-avatar .flex-space .btns {
+  body #app .set-avatar .flex-space .btns {
     margin-left: -11px;
   }
 }
-body.set-avatar .flex-space .btns .close {
+body #app .set-avatar .flex-space .btns .close {
   position: unset;
   width: auto;
   padding: 11px;
 }
-body.restore .btns {
+body #app .restore .btns {
   margin-top: 130px;
 }
-body.choose-password form {
+body #app .choose-password form {
   margin-top: 80px;
 }
-body.choose-password .error {
+body #app .choose-password .error {
   color: #FB0007;
   font-weight: 700;
   font-size: 16px;
   margin-bottom: 0;
   margin-top: 60px;
 }
-body.choose-password .btns {
+body #app .choose-password .btns {
   margin-top: 40px;
 }
-body.account-complete .flex-space header h1, body.account-complete .flex-space header .h1 {
+body #app .account-complete .flex-space header h1, body #app .account-complete .flex-space header .h1 {
   color: #24b1ff;
 }
 @media screen and (min-width: 768px) {
-  body.account-complete .flex-space .content {
+  body #app .account-complete .flex-space .content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -8135,97 +8147,98 @@ body.account-complete .flex-space header h1, body.account-complete .flex-space h
     gap: 30px;
   }
 }
-body.account-complete .flex-space figure.avatar {
+body #app .account-complete .flex-space figure.avatar {
   margin-bottom: 15px;
 }
-body.account-complete .flex-space .btns {
+body #app .account-complete .flex-space .btns {
   margin-top: 120px;
 }
 @media screen and (min-width: 768px) {
-  body.account-complete .flex-space .btns {
+  body #app .account-complete .flex-space .btns {
     margin-top: 60px;
   }
 }
-body.restore-confirm figure.avatar {
+body #app .restore-confirm figure.avatar {
   margin-bottom: 15px;
 }
-body.restore-confirm .btns {
+body #app .restore-confirm .btns {
+  margin-top: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media (min-width: 768px) {
-  body.restore-confirm .btns {
+  body #app .restore-confirm .btns {
     margin-left: -11px;
   }
 }
-body.restore-confirm .btns .close {
+body #app .restore-confirm .btns .close {
   position: unset;
   width: auto;
   padding: 11px;
 }
-body.restore-confirmed .flex-space header h1, body.restore-confirmed .flex-space header .h1 {
+body #app .restore-confirmed .flex-space header h1, body #app .restore-confirmed .flex-space header .h1 {
   color: #24b1ff;
 }
-body.restore-confirmed .flex-space .content {
+body #app .restore-confirmed .flex-space .content {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
 }
-body.restore-confirmed .flex-space .content figure.avatar {
+body #app .restore-confirmed .flex-space .content figure.avatar {
   margin-bottom: 15px;
 }
-body.restore-confirmed .btn {
+body #app .restore-confirmed .btn {
   margin-top: 90px;
 }
-body.password-warning .warning-box {
+body #app .password-warning .warning-box {
   width: 750px;
   max-width: 100%;
 }
-body.download-file .bottomlink {
+body #app .download-file .bottomlink {
   margin-top: 40px;
 }
-body.keys .container > p:first-child {
+body #app .keys .container > p:first-child {
   margin-bottom: 4px;
 }
-body.keys .links {
+body #app .keys .links {
   justify-content: flex-start;
 }
-body.keys hr {
+body #app .keys hr {
   margin: 60px 0;
 }
-body.keys .key-hidden {
+body #app .keys .key-hidden {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  body.keys .key-hidden {
+  body #app .keys .key-hidden {
     text-align: left;
     max-width: 480px;
   }
 }
-body.keys .btn.btn-light {
+body #app .keys .btn.btn-light {
   color: #262626;
   margin-top: 40px;
 }
-body.success header h1, body.success header .h1 {
+body #app .success header h1, body #app .success header .h1 {
   color: #24b1ff;
   margin-bottom: 20px;
 }
-body.success .btns {
+body #app .success .btns {
   margin-top: 170px;
 }
-body.success .btns .btn {
+body #app .success .btns .btn {
   color: #262626;
 }
-body.user-account .avatar {
+body #app .user-account .avatar {
   margin-bottom: 45px;
 }
-body.user-account .link {
+body #app .user-account .link {
   margin-top: 30px;
 }
-body.user-account .user .darktext, body.user-account .user .marketplace-reps .marketplace .title, body.user-account .marketplace-reps .marketplace .user .title, body.user-account .user form input, body.user-account form .user input, body.user-account .user form input, body.user-account form .user input {
+body #app .user-account .user .darktext, body #app .user-account .user .marketplace-reps .marketplace .title, body #app .marketplace-reps .marketplace .user-account .user .title, body #app .user-account .user form input, body #app form .user-account .user input, body #app .user-account .user form input, body #app form .user-account .user input {
   border-bottom: 1px solid #333333;
   padding-bottom: 5px;
   display: block;
@@ -8233,109 +8246,112 @@ body.user-account .user .darktext, body.user-account .user .marketplace-reps .ma
   max-width: 320px;
   margin: auto;
 }
-body.user-account .btns .btn {
+body #app .user-account .btns .btn {
   display: block;
 }
-body.download-success header h1, body.download-success header .h1 {
+body #app .download-success header h1, body #app .download-success header .h1 {
   margin-bottom: 40px;
 }
-body.download-success .link {
+body #app .download-success .link {
   margin-top: 40px;
 }
-body.download-success .btns {
+body #app .download-success .btns {
   margin-top: 60px;
 }
-body.account-wallet .flex-space {
+body #app .account-wallet .flex-space {
   align-items: flex-start;
 }
 @media screen and (min-width: 768px) {
-  body.account-wallet .flex-space figure.avatar .wallet-balance {
+  body #app .account-wallet .flex-space figure.avatar .wallet-balance {
     font-size: 24px;
   }
-  body.account-wallet .flex-space figure.avatar .username {
+  body #app .account-wallet .flex-space figure.avatar .username {
     font-size: 14px;
   }
-  body.account-wallet .flex-space figure.avatar.avatar-sm img {
+  body #app .account-wallet .flex-space figure.avatar.avatar-sm img {
     width: 60px;
   }
 }
-body.user-wallet .link, body.user-wallet-send .link {
+body #app .user-wallet .link,
+body #app .user-wallet-send .link {
   margin-top: 21px;
 }
-body.user-wallet form .input-group, body.user-wallet-send form .input-group {
+body #app .user-wallet form .input-group,
+body #app .user-wallet-send form .input-group {
   display: flex;
   flex-direction: column-reverse;
 }
-body.user-wallet form .input-group input:focus + label, body.user-wallet-send form .input-group input:focus + label {
+body #app .user-wallet form .input-group input:focus + label,
+body #app .user-wallet-send form .input-group input:focus + label {
   color: #24b1ff;
 }
-body.user-wallet-send form.send #rec-address {
+body #app .user-wallet-send form.send #rec-address {
   margin-top: 32px;
 }
 @media screen and (min-width: 768px) {
-  body.user-wallet-send form.send,
-body.user-wallet-send input {
+  body #app .user-wallet-send form.send,
+body #app .user-wallet-send input {
     width: 600px;
     max-width: 100%;
   }
 }
-body.user-wallet-send .btns {
+body #app .user-wallet-send .btns {
   margin-top: 180px;
 }
-body.send-confirm .flex-space .btns {
+body #app .send-confirm .flex-space .btns {
   margin-top: 180px;
 }
 @media screen and (min-width: 768px) {
-  body.send-confirm .flex-space .btns {
+  body #app .send-confirm .flex-space .btns {
     margin-top: 60px;
   }
 }
-body.send-password .flex-space {
+body #app .send-password .flex-space {
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  body.send-password .flex-space .avatar {
+  body #app .send-password .flex-space .avatar {
     margin-left: auto;
   }
 }
-body.send-password .flex-space .avatar img {
+body #app .send-password .flex-space .avatar img {
   width: 75px;
 }
-body.send-password .flex-space form input {
+body #app .send-password .flex-space form input {
   text-align: center;
 }
-body.send-password .flex-space .btns {
+body #app .send-password .flex-space .btns {
   margin-top: 50px;
 }
-body.wallet-sent .flex-space .check {
+body #app .wallet-sent .flex-space .check {
   margin-top: 40px;
 }
-body.wallet-sent .flex-space .btns {
+body #app .wallet-sent .flex-space .btns {
   margin-top: 240px;
 }
-body.send-fail header h1, body.send-fail header .h1 {
+body #app .send-fail header h1, body #app .send-fail header .h1 {
   margin-bottom: 30px;
 }
-body.send-fail .btns {
+body #app .send-fail .btns {
   margin-top: 80px;
 }
 @media screen and (min-width: 768px) {
-  body.send-fail .btns {
+  body #app .send-fail .btns {
     margin-top: 190px;
   }
 }
 @media screen and (min-width: 768px) {
-  body.wallet-receiving .tx-amt span {
+  body #app .wallet-receiving .tx-amt span {
     display: none;
   }
-  body.wallet-receiving .status span {
+  body #app .wallet-receiving .status span {
     color: #24b1ff;
     font-size: 36px;
     padding-left: 15px;
     line-height: 24px;
   }
-  body.wallet-receiving .tx-amt,
-body.wallet-receiving .status {
+  body #app .wallet-receiving .tx-amt,
+body #app .wallet-receiving .status {
     display: inline;
   }
 }
