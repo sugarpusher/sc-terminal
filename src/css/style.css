@@ -7327,7 +7327,7 @@ body #app {
 body #app > div {
   padding-top: 137px;
   padding-bottom: 60px;
-  height: 100% !important;
+  min-height: 100% !important;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -7472,7 +7472,7 @@ body #app .btn {
   max-width: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 2px;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
 }
 body #app .btn span {
   display: block;
