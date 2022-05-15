@@ -200,8 +200,12 @@ body {
         
         .bg-info,
         .bg-success,
-        .bg-danger {
+        .bg-danger,
+        .btn-darker {
             color: $white !important;
+            &.disabled {
+                color: rgba(255,255,255,0.25);
+            }
         }
         
         .btn {
@@ -224,13 +228,13 @@ body {
         .btn-darker {
             background-color: rgba(0, 0, 0, 0.15);
             border-color: transparent;
-            color: $white;
+            // color: $white;
         }
         
         .btn-info {
             background-color: #44a1d5;
             border-color: #44a1d5;
-            color: $white;
+            // color: $white;
             display: block;
             box-shadow: 0px 2px 2px rgb(0 0 0 / 15%),
                 inset 0px 1px 2px rgb(255 255 255 / 15%);
@@ -252,10 +256,16 @@ body {
             display: flex !important;
             align-items: center;
             justify-content: center;
-            background-color: $white;
+            background-color: $white; 
         
             &.btn-info {
                 background-color: $info;
+            }
+
+            &.disabled {
+                img {
+                    opacity: 0.25;
+                }
             }
         }
         
@@ -1356,10 +1366,6 @@ body {
         }
         
         .wallet-receiving {
-            .status {
-                // display: none;
-            }
-        
             @media screen and (min-width: 768px) {
                 .tx-amt {
                     span {
