@@ -7466,10 +7466,13 @@ body #app .bg-danger,
 body #app .btn-darker {
   color: #fafafa !important;
 }
-body #app .bg-info.disabled,
+body #app .bg-info.disabled, body #app .bg-info:disabled,
 body #app .bg-success.disabled,
+body #app .bg-success:disabled,
 body #app .bg-danger.disabled,
-body #app .btn-darker.disabled {
+body #app .bg-danger:disabled,
+body #app .btn-darker.disabled,
+body #app .btn-darker:disabled {
   color: rgba(255, 255, 255, 0.25);
 }
 body #app .btn {
@@ -7512,7 +7515,7 @@ body #app .btn-icon {
 body #app .btn-icon.btn-info {
   background-color: #24b1ff;
 }
-body #app .btn-icon.disabled img {
+body #app .btn-icon.disabled img, body #app .btn-icon:disabled img {
   opacity: 0.25;
 }
 body #app .loading {

@@ -203,7 +203,8 @@ body {
         .bg-danger,
         .btn-darker {
             color: $white !important;
-            &.disabled {
+            &.disabled,
+            &:disabled {
                 color: rgba(255,255,255,0.25);
             }
         }
@@ -262,7 +263,8 @@ body {
                 background-color: $info;
             }
 
-            &.disabled {
+            &.disabled,
+            &:disabled {
                 img {
                     opacity: 0.25;
                 }
