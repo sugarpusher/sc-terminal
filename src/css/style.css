@@ -7475,6 +7475,9 @@ body #app .btn-darker.disabled,
 body #app .btn-darker:disabled {
   color: rgba(255, 255, 255, 0.25);
 }
+body #app button {
+  cursor: pointer;
+}
 body #app .btn {
   font-size: 21px;
   padding: 24px;
@@ -7488,6 +7491,13 @@ body #app .btn span {
   display: block;
   font-weight: 100;
   font-size: 10px;
+}
+body #app .btn-img {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
 }
 body #app .btn-darker {
   background-color: rgba(0, 0, 0, 0.15);
@@ -7511,6 +7521,10 @@ body #app .btn-icon {
   align-items: center;
   justify-content: center;
   background-color: #fafafa;
+  margin: 0;
+}
+body #app .btn-icon.btn-neg {
+  background-color: transparent;
 }
 body #app .btn-icon.btn-info {
   background-color: #24b1ff;

@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-		<!-- <link rel="icon" href="/favicon.ico" /> -->
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/favicon/favicon-16x16.png">
-        <link rel="mask-icon" href="assets/imgs/favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Decentralized Marketplaces" />
-		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
-        <link rel="stylesheet" href="css/style.css">        
-		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Set Avatar</title>        
-    </head>
-    <body>
-        <div id="app">
-            <div class="bg-gray-lt set-avatar">
-                <div class="container">
-                    <main class="flex-space">
-                        <header>
-                            <div class="canvas">
-                                <a href="#" class="avatar">
-                                    <img src="assets/imgs/avatar.svg">
-                                </a>
-                                <a href="#" class="rotate">
-                                    <img src="assets/imgs/iconRotate.svg">
-                                </a>
-                            </div>
-                            <p>Scroll to zoom - drag to move</p>
-                        </header>
-                        <div class="btns">
-                            <a class="close" href="user-create-username.html">
-                                <img src="assets/imgs/cancel.svg">
-                            </a>
-                            <a class="btn-icon" href="user-create-username.html">
-                                <img src="assets/imgs/checkMarkBlue.svg">
-                            </a>
-                        </div>
-                    </main>
-                    <div class="bottomlink">
-                        <a class="link" href="#">
-                            choose another file
-                        </a>
-                    </div>
-                </div>
-                <!-- Bootstrap JS, uncomment if needed -->
-                <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
-
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/imgs/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/imgs/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/imgs/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="mask-icon"
+      href="assets/imgs/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Decentralized Marketplaces" />
+    <link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="manifest" href="/manifest.json" /> -->
+    <title>Swarm City - Set Avatar</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="bg-gray-lt set-avatar">
+        <div class="container">
+          <main class="flex-space">
+            <header>
+              <div class="canvas">
+                <a href="#" class="avatar">
+                  <img src="assets/imgs/avatar.svg" />
+                </a>
+                <a href="#" class="rotate">
+                  <img src="assets/imgs/iconRotate.svg" />
+                </a>
+              </div>
+              <p>Scroll to zoom - drag to move</p>
+            </header>
+            <div class="btns">
+              <button
+                class="close btn-img"
+                onclick="window.location.href='user-create-username.html';"
+              >
+                <img src="assets/imgs/cancel.svg" />
+              </button>
+              <button
+                class="btn-icon btn"
+                onclick="window.location.href='user-create-username.html';"
+              >
+                <img src="assets/imgs/checkMarkBlue.svg" />
+              </button>
             </div>
+          </main>
+          <div class="bottomlink">
+            <a class="link" href="#">
+              choose another file
+            </a>
+          </div>
         </div>
-    </body>
+        <!-- Bootstrap JS, uncomment if needed -->
+        <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+      </div>
+    </div>
+  </body>
 </html>

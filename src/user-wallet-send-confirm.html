@@ -1,51 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-		<!-- <link rel="icon" href="/favicon.ico" /> -->
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/favicon/favicon-16x16.png">
-        <link rel="mask-icon" href="assets/imgs/favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Decentralized Marketplaces" />
-		<link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
-        <link rel="stylesheet" href="css/style.css">        
-		<!-- <link rel="manifest" href="/manifest.json" /> -->
-		<title>Swarm City - Confirm sending</title>        
-    </head>
-    <body>
-        <div id="app">
-            <div class="bg-info send-confirm">
-                <!-- <div class="close">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/imgs/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/imgs/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/imgs/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="mask-icon"
+      href="assets/imgs/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Decentralized Marketplaces" />
+    <link rel="apple-touch-icon" href="assets/imgs/favicon/icon-192x192.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="manifest" href="/manifest.json" /> -->
+    <title>Swarm City - Confirm sending</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="bg-info send-confirm">
+        <!-- <div class="close">
                     <a href="index.html">
                         <img src="assets/imgs/closeWhite.svg" />
                     </a>
                 </div> -->
-                <div class="container">            
-                    <main class="flex-space">
-                        <header>
-                            <h1>
-                                Send <span class="text-warning">10 DAI</span> to this address?
-                            </h1>
-                            <p>This can not be undone.</p>
-                        </header>
-                        <div class="btns btn-icons">
-                            <a class="close" href="#" onclick="history.go(-1)">
-                                <img src="assets/imgs/cancel.svg">
-                            </a>
-                            <a class="" href="user-wallet-send-password.html">
-                                <img src="assets/imgs/checkMarkNegative.svg">
-                            </a>
-                        </div>
-                    </main>
-                </div>
-                <!-- Bootstrap JS, uncomment if needed -->
-                <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
-
+        <div class="container">
+          <main class="flex-space">
+            <header>
+              <h1>
+                Send
+                <span class="text-warning">10 DAI</span>
+                to this address?
+              </h1>
+              <p>This can not be undone.</p>
+            </header>
+            <div class="btns btn-icons">
+              <button
+                class="btn-img close"
+                type="button"
+                onclick="history.go(-1);"
+              >
+                <img src="assets/imgs/cancel.svg" />
+              </button>
+              <button
+                class="btn btn-icon btn-neg"
+                onclick="window.location.href='user-wallet-send-password.html';"
+              >
+                <img src="assets/imgs/caretNextNegative.svg" />
+              </button>
             </div>
+          </main>
         </div>
-    </body>
+        <!-- Bootstrap JS, uncomment if needed -->
+        <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+      </div>
+    </div>
+  </body>
 </html>
