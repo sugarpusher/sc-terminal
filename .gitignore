@@ -1,3 +1,4 @@
 node_modules/
 .vscode/
+.vscode/settings.json
 sc-terminal-1.code-workspace
