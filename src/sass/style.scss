@@ -18,6 +18,7 @@
 @import "../../node_modules/bootstrap/scss/containers";
 @import "../../node_modules/bootstrap/scss/grid";
 @import "../../node_modules/bootstrap/scss/helpers";
+@import "../../node_modules/bootstrap/scss/modal";
 
 // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../../node_modules/bootstrap/scss/utilities/api";
@@ -201,6 +202,10 @@ body {
         
         .bg-info {
             background-color: $info !important;
+        }
+		.bg-info-50 {		
+			// background-color: fade-out($blue, 0.5) !important;	
+			background-color: rgba(36,177,255, 0.5) !important;
         }
         
         .bg-info,
@@ -1365,6 +1370,19 @@ body {
                     }
                 }
             }
+			#pwModal {
+				padding-top: 137px;
+				backdrop-filter: blur(10px);
+				.modal-content {
+					background-color: transparent;
+					.modal-body {
+						padding: 0;
+						.send-password {
+							height: 100%;
+						}
+					}
+				}
+			}
         }
         
         .send-password {
