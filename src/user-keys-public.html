@@ -37,6 +37,9 @@
   <body>
     <div id="app">
       <div class="bg-gray-lt keys">
+        <div id="copied">
+          Copied!
+        </div>
         <div class="close">
           <button
             onclick="window.location.href='user-backup-print-download.html';"
@@ -54,7 +57,9 @@
               0x369D787F3EcF4a0e57cDfCFB2Db92134e1982e06
             </p>
             <div class="links">
-              <a class="link" href="#">copy public key</a>
+              <a class="link" href="#" onclick="runCopied();">
+                copy public key
+              </a>
               <a class="link" href="user-keys-public-qr.html">show QR code</a>
             </div>
           </div>
@@ -84,5 +89,14 @@
         <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
       </div>
     </div>
+    <script>
+      function runCopied() {
+        document.getElementById('copied').style.animation =
+          'fade 2s ease-in-out 1 backwards running'
+        setTimeout(function () {
+          document.getElementById('copied').style.animation = null
+        }, 2000)
+      }
+    </script>
   </body>
 </html>
