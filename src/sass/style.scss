@@ -733,7 +733,7 @@ body {
         
         form {
             width: 100%;
-            max-width: 276px;
+            // max-width: 276px;
             font-weight: 400;
             // border-bottom-color: $gray-dkest;
             border-bottom-color: $grey3;
@@ -741,12 +741,12 @@ body {
         
             label {
                 @extend .label;
-                max-width: 320px;
-                width: 205px;
-                margin: auto;
-        
+                // max-width: 320px;
+                // width: 205px;
+				
                 @media screen and (min-width: 768px) {
-                    width: 276px;
+					// margin: auto;
+                    // width: 276px;
                     margin-left: 0;
                 }
             }
@@ -758,13 +758,16 @@ body {
                 padding-bottom: 5px;
                 @extend .darktext;
                 display: block;
-                max-width: 320px;
-                width: 205px;
+                // max-width: 320px;
+                // width: 205px;
+				width: 100%;
                 margin: auto;
+				transition: border 0.5s;
         
                 &:focus {
                     border-bottom-color: $info;
                     border-bottom-width: 2px;
+					transition: border 0.5s;
                 }
         
                 &:focus-visible {
@@ -772,7 +775,7 @@ body {
                 }
         
                 @media screen and (min-width: 768px) {
-                    width: 276px;
+                    // width: 276px;
                     margin-left: 0;
         
                     &:not(:first-of-type) {
@@ -1378,9 +1381,25 @@ body {
                 .input-group {
                     display: flex;
                     flex-direction: column-reverse;
-        
+					position: relative;
+					
+					label {
+						color: $black;
+						position: absolute;
+						bottom: 10px;
+						left: 0;
+						font-weight: 400;
+						font-size: 14px;
+						transition: font-size 0.5s, font-weight 0.5s, color 0.5s, bottom 0.5s;
+					}
+
                     input:focus+label {
-                        color: $info;
+						bottom: 46px;
+                        color: $info;	
+						font-size: 10px;		
+						font-weight: 700;
+    					color: #666666;			
+						transition: font-size 0.5s, font-weight 0.5s, color 0.5s, bottom 0.5s;
                     }
                 }
             }
@@ -1393,13 +1412,12 @@ body {
                 }
             }
         
-            form.send,
-            input {
-                @media screen and (min-width: 768px) {
-                    width: 600px;
-                    max-width: 100%;
-                }
-            }
+            // form.send {
+            //     @media screen and (min-width: 768px) {
+            //         width: 600px;
+            //         max-width: 100%;
+            //     }
+            // }
         
             .btns {
                 margin-top: 180px;

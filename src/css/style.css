@@ -8189,19 +8189,12 @@ body #app .history .history-item.pending, body #app .history .history-item.faile
 }
 body #app form {
   width: 100%;
-  max-width: 276px;
   font-weight: 400;
   border-bottom-color: #666666;
   color: #262626;
 }
-body #app form label {
-  max-width: 320px;
-  width: 205px;
-  margin: auto;
-}
 @media screen and (min-width: 768px) {
   body #app form label {
-    width: 276px;
     margin-left: 0;
   }
 }
@@ -8211,20 +8204,20 @@ body #app form input {
   border-bottom: 1px solid #333333;
   padding-bottom: 5px;
   display: block;
-  max-width: 320px;
-  width: 205px;
+  width: 100%;
   margin: auto;
+  transition: border 0.5s;
 }
 body #app form input:focus {
   border-bottom-color: #24b1ff;
   border-bottom-width: 2px;
+  transition: border 0.5s;
 }
 body #app form input:focus-visible {
   outline: none;
 }
 @media screen and (min-width: 768px) {
   body #app form input {
-    width: 276px;
     margin-left: 0;
   }
   body #app form input:not(:first-of-type) {
@@ -8675,20 +8668,29 @@ body #app .user-wallet form .input-group,
 body #app .user-wallet-send form .input-group {
   display: flex;
   flex-direction: column-reverse;
+  position: relative;
+}
+body #app .user-wallet form .input-group label,
+body #app .user-wallet-send form .input-group label {
+  color: #262626;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  font-weight: 400;
+  font-size: 14px;
+  transition: font-size 0.5s, font-weight 0.5s, color 0.5s, bottom 0.5s;
 }
 body #app .user-wallet form .input-group input:focus + label,
 body #app .user-wallet-send form .input-group input:focus + label {
+  bottom: 46px;
   color: #24b1ff;
+  font-size: 10px;
+  font-weight: 700;
+  color: #666666;
+  transition: font-size 0.5s, font-weight 0.5s, color 0.5s, bottom 0.5s;
 }
 body #app .user-wallet-send form.send #rec-address {
   margin-top: 32px;
-}
-@media screen and (min-width: 768px) {
-  body #app .user-wallet-send form.send,
-body #app .user-wallet-send input {
-    width: 600px;
-    max-width: 100%;
-  }
 }
 body #app .user-wallet-send .btns {
   margin-top: 180px;
